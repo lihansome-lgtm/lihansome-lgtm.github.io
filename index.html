@@ -11,16 +11,16 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #ffffff;
-            padding-top: 80px;
+            padding-top: 40px;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-left: 50px;
+            padding-left: 20px;
         }
 
         h2 {
-            font-size: 26px;
-            margin-top: 20px;
-            margin-bottom: 18px;
+            font-size: 22px;
+            margin-top: 10px;
+            margin-bottom: 12px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
 
@@ -28,12 +28,12 @@
             margin-top: 10px;
             text-align: left;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(30,10,50,0.6));
-            padding: 25px 30px;
-            border-radius: 15px;
-            font-size: 16px;
-            line-height: 1.9;
-            width: 460px;
-            box-shadow: 0 0 25px rgba(150, 50, 255, 0.3);
+            padding: 18px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            line-height: 1.6;
+            width: 380px;
+            box-shadow: 0 0 18px rgba(150, 50, 255, 0.3);
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
 
@@ -48,46 +48,46 @@
             text-shadow: 1px 1px 3px #000000;
             cursor: pointer;
             transition: all 0.4s ease;
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 3px 8px;
+            border-radius: 5px;
         }
 
         .track-list li:hover {
             color: #ffffff;
             background-color: rgba(255, 221, 0, 0.2);
-            padding-left: 15px;
+            padding-left: 12px;
         }
 
         .track-list li.playing {
             color: #ffffff;
             background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
-            box-shadow: 0 0 15px rgba(255, 200, 0, 0.6), 0 0 30px rgba(255, 150, 0, 0.3);
+            box-shadow: 0 0 12px rgba(255, 200, 0, 0.6), 0 0 25px rgba(255, 150, 0, 0.3);
             animation: glow 1.2s ease-in-out infinite alternate;
-            padding-left: 15px;
+            padding-left: 12px;
             font-weight: bold;
         }
 
         @keyframes glow {
             from {
-                box-shadow: 0 0 10px rgba(255, 200, 0, 0.5), 0 0 20px rgba(255, 150, 0, 0.2);
+                box-shadow: 0 0 8px rgba(255, 200, 0, 0.5), 0 0 15px rgba(255, 150, 0, 0.2);
             }
             to {
-                box-shadow: 0 0 20px rgba(255, 200, 0, 0.9), 0 0 40px rgba(255, 150, 0, 0.5);
+                box-shadow: 0 0 15px rgba(255, 200, 0, 0.9), 0 0 30px rgba(255, 150, 0, 0.5);
             }
         }
 
         .player-container {
-            margin-top: 25px;
-            padding: 20px;
+            margin-top: 18px;
+            padding: 15px;
             background: rgba(0, 0, 0, 0.4);
-            border-radius: 12px;
+            border-radius: 10px;
             text-align: center;
         }
 
         .now-playing {
             color: #ffdd00;
-            font-size: 14px;
-            margin-bottom: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
             font-style: italic;
         }
 
@@ -95,36 +95,36 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            height: 25px;
-            margin-bottom: 15px;
+            height: 18px;
+            margin-bottom: 10px;
             gap: 2px;
         }
         .bar {
-            width: 3px;
+            width: 2px;
             background-color: #ffffff;
             border-radius: 2px;
             animation: bounce 0.5s ease-in-out infinite alternate;
         }
         @keyframes bounce {
-            from { height: 5px; }
-            to { height: 20px; }
+            from { height: 4px; }
+            to { height: 16px; }
         }
 
         .controls {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
-            margin-bottom: 15px;
+            gap: 18px;
+            margin-bottom: 10px;
         }
         .btn {
             background: transparent;
             border: 2px solid #ffffff;
             color: #ffffff;
-            width: 45px;
-            height: 45px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -135,117 +135,116 @@
             background: rgba(255,255,255,0.2);
         }
         .btn.main {
-            width: 55px;
-            height: 55px;
-            font-size: 20px;
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
         }
 
         .progress-wrap {
             width: 100%;
-            margin-top: 10px;
+            margin-top: 8px;
         }
         .progress-bar {
             width: 100%;
-            height: 3px;
+            height: 2px;
             background: rgba(255,255,255,0.3);
-            border-radius: 3px;
+            border-radius: 2px;
             cursor: pointer;
         }
         .progress-fill {
             height: 100%;
             width: 0%;
             background: #ffffff;
-            border-radius: 3px;
+            border-radius: 2px;
             position: relative;
         }
         .progress-fill::after {
             content: '';
             position: absolute;
-            right: -6px;
-            top: -4px;
-            width: 11px;
-            height: 11px;
+            right: -5px;
+            top: -3px;
+            width: 9px;
+            height: 9px;
             background: #ffffff;
             border-radius: 50%;
         }
         .time-display {
             display: flex;
             justify-content: space-between;
-            font-size: 12px;
+            font-size: 11px;
             color: #ffffff;
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
         .volume-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin-top: 12px;
+            gap: 8px;
+            margin-top: 10px;
             cursor: pointer;
         }
         .volume-icon {
             color: #ffffff;
-            font-size: 18px;
+            font-size: 16px;
         }
         .volume-slider {
-            width: 150px;
-            height: 3px;
+            width: 120px;
+            height: 2px;
             background: rgba(255,255,255,0.3);
-            border-radius: 3px;
+            border-radius: 2px;
             position: relative;
         }
         .volume-fill {
             height: 100%;
             width: 70%;
             background: #ffffff;
-            border-radius: 3px;
+            border-radius: 2px;
             position: relative;
         }
         .volume-fill::after {
             content: '';
             position: absolute;
-            right: -6px;
-            top: -4px;
-            width: 11px;
-            height: 11px;
+            right: -5px;
+            top: -3px;
+            width: 9px;
+            height: 9px;
             background: #ffffff;
             border-radius: 50%;
         }
 
-        /* ✅ SOCIAL MEDIA TEXT & BUTTONS WITH ICONS */
         .social-text {
-            margin-top: 15px;
-            margin-bottom: 10px;
+            margin-top: 12px;
+            margin-bottom: 8px;
             color: #ffffff;
-            font-size: 14px;
+            font-size: 13px;
             font-style: italic;
         }
         .social-text span {
             color: #ffdd00;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
         }
         .social-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            border-radius: 25px;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 20px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
         .social-btn .icon {
-            font-size: 18px;
+            font-size: 16px;
         }
         .social-btn.facebook { background: #1877f2; }
         .social-btn.facebook:hover { background: transparent; border-color: #1877f2; color: #1877f2; }
@@ -299,7 +298,6 @@
                 </div>
             </div>
 
-            <!-- ✅ NEW: TEXT WITH ARROW + ICONS ON BUTTONS -->
             <div class="social-text">
                 Don't forget to follow my social media accounts here <span>⤵</span>
             </div>
