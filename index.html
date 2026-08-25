@@ -46,8 +46,7 @@
         .track-list li {
             color: #ffdd00;
             text-shadow: 1px 1px 3px #000000;
-            cursor:
- pointer;
+            cursor: pointer;
             transition: all 0.4s ease;
             padding: 4px 10px;
             border-radius: 6px;
@@ -177,29 +176,25 @@
             margin-top: 5px;
         }
 
-        /* ✅ VOLUME CONTROL */
         .volume-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             margin-top: 12px;
+            cursor: pointer;
         }
-
         .volume-icon {
             color: #ffffff;
             font-size: 18px;
         }
-
         .volume-slider {
             width: 150px;
             height: 3px;
             background: rgba(255,255,255,0.3);
             border-radius: 3px;
-            cursor: pointer;
             position: relative;
         }
-
         .volume-fill {
             height: 100%;
             width: 70%;
@@ -207,7 +202,6 @@
             border-radius: 3px;
             position: relative;
         }
-
         .volume-fill::after {
             content: '';
             position: absolute;
@@ -225,7 +219,6 @@
             justify-content: center;
             gap: 12px;
         }
-
         .social-btn {
             display: inline-block;
             padding: 10px 18px;
@@ -237,33 +230,12 @@
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
-
-        .social-btn.facebook {
-            background: #1877f2;
-        }
-        .social-btn.facebook:hover {
-            background: transparent;
-            border-color: #1877f2;
-            color: #1877f2;
-        }
-
-        .social-btn.youtube {
-            background: #ff0000;
-        }
-        .social-btn.youtube:hover {
-            background: transparent;
-            border-color: #ff0000;
-            color: #ff0000;
-        }
-
-        .social-btn.tiktok {
-            background: #000000;
-            border-color: #ffffff;
-        }
-        .social-btn.tiktok:hover {
-            background: #ffffff;
-            color: #000000;
-        }
+        .social-btn.facebook { background: #1877f2; }
+        .social-btn.facebook:hover { background: transparent; border-color: #1877f2; color: #1877f2; }
+        .social-btn.youtube { background: #ff0000; }
+        .social-btn.youtube:hover { background: transparent; border-color: #ff0000; color: #ff0000; }
+        .social-btn.tiktok { background: #000000; border-color: #ffffff; }
+        .social-btn.tiktok:hover { background: #ffffff; color: #000000; }
 
         audio { display: none; }
     </style>
@@ -285,7 +257,6 @@
 
         <div class="player-container">
             <div class="now-playing" id="nowPlaying">Select a song to play...</div>
-
             <div class="visualizer" id="visualizer"></div>
 
             <div class="controls">
@@ -304,7 +275,6 @@
                 </div>
             </div>
 
-            <!-- ✅ VOLUME SLIDER -->
             <div class="volume-wrap" onclick="setVolume(event)">
                 <span class="volume-icon">🔊</span>
                 <div class="volume-slider">
@@ -313,9 +283,9 @@
             </div>
 
             <div class="social-links">
-                <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">Facebook</a>
-                <a href="hhttp://www.youtube.com/user/MyHansome23" target="_blank" class="social-btn youtube">YouTube</a>
-                <a href="https://www.tiktok.com/@niddofias" target="_blank" class="social-btn tiktok">TikTok</a>
+                <a href="https://www.facebook.com/niddoflas" target="_blank" class="social-btn facebook">Facebook</a>
+                <a href="https://www.youtube.com/@MyIensome23" target="_blank" class="social-btn youtube">YouTube</a>
+                <a href="https://www.tiktok.com/@niddoflas" target="_blank" class="social-btn tiktok">TikTok</a>
             </div>
 
             <audio id="player">
@@ -325,6 +295,7 @@
     <script>
         let currentPlaying = null;
         let currentIndex = -1;
+
         const songFiles = [
             'Alone.mp3',
             'Andamanaya.mp3',
@@ -333,8 +304,9 @@
             'Fixing a broken heart.mp3',
             'How do I live without you.mp3',
             'How do you heal a broken heart.mp3',
-            'I love you, goodbye.mp3'
+            'I love you goodbye.mp3'
         ];
+
         const songNames = {
             'Alone.mp3': 'Alone',
             'Andamanaya.mp3': 'Andamanaya',
@@ -343,7 +315,7 @@
             'Fixing a broken heart.mp3': 'Fixing A Broken Heart',
             'How do I live without you.mp3': 'How Do I Live Without You',
             'How do you heal a broken heart.mp3': 'How Do You Heal A Broken Heart',
-            'I love you, goodbye.mp3': 'I Love You Goodbye'
+            'I love you goodbye.mp3': 'I Love You Goodbye'
         };
 
         const player = document.getElementById('player');
@@ -354,7 +326,6 @@
         const visualizer = document.getElementById('visualizer');
         const volumeFill = document.getElementById('volumeFill');
 
-        // ✅ DEFAULT VOLUME 70%
         player.volume = 0.7;
 
         for(let i=0; i<20; i++) {
@@ -368,7 +339,6 @@
             if (currentPlaying) currentPlaying.classList.remove('playing');
             element.classList.add('playing');
             currentPlaying = element;
-
             const file = element.dataset.file;
             currentIndex = songFiles.indexOf(file);
             document.getElementById('nowPlaying').textContent = '🎶 Now Playing: ' + songNames[file];
@@ -408,7 +378,6 @@
             }
         }
 
-        // ✅ VOLUME CONTROL FUNCTION
         function setVolume(e) {
             const rect = e.currentTarget.getBoundingClientRect();
             const percent = (e.clientX - rect.left) / rect.width;
