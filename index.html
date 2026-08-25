@@ -20,7 +20,7 @@
         h1 {
             font-size: 48px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-            text-align: center; /* ✅ PANGALAN MO NAKA-CENTER */
+            text-align: center;
             position: absolute;
             top: 20px;
             left: 0;
@@ -43,19 +43,33 @@
             border-radius: 15px;
             font-size: 20px;
             line-height: 2.2;
-            width: 450px;
+            width: 500px;
             box-shadow: 0 0 25px rgba(150, 50, 255, 0.3);
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
 
-        .track-list ol {
-            padding-left: 20px;
+        .track-list ul {
+            list-style: none; /* ✅ WALANG NUMERO SA GILID */
+            padding-left: 0;
             margin: 0;
         }
 
         .track-list li {
             color: #ffdd00;
             text-shadow: 1px 1px 3px #000000;
+            cursor: pointer; /* ✅ MAGIGING KAMAY ANG KURSORE */
+            transition: all 0.3s ease;
+        }
+
+        .track-list li:hover {
+            color: #ffffff; /* ✅ PUTI KAPAG NAKATUNGO */
+            text-decoration: underline;
+            padding-left: 10px;
+        }
+
+        .player {
+            margin-top: 20px;
+            width: 100%;
         }
     </style>
 </head>
@@ -64,16 +78,26 @@
 
     <h2>📋 Broken Track List</h2>
     <div class="track-list">
-        <ol>
-            <li>Alone hugot </li>
-            <li>Andamanaya hugot </li>
-            <li>Broken angel hugot </li>
-            <li>Do I have to cry for you hugot </li>
-            <li>Fixing a broken heart hugot </li>
-            <li>How do I live without you hugot </li>
-            <li>How do you heal a broken heart hugot </li>
-            <li>I love you goodbye hugot </li>
-        </ol>
+        <ul>
+            <li onclick="playSong('Alone.mp3')">🎵 Alone</li>
+            <li onclick="playSong('Andamanaya.mp3')">🎵 Andamanaya</li>
+            <li onclick="playSong('broken angel.mp3')">🎵 Broken Angel</li>
+            <li onclick="playSong('Do I have to cry for you.mp3')">🎵 Do I Have To Cry For You</li>
+            <li onclick="playSong('Fixing a broken heart.mp3')">🎵 Fixing A Broken Heart</li>
+            <li onclick="playSong('How do I live without you.mp3')">🎵 How Do I Live Without You</li>
+            <li onclick="playSong('How do you heal a broken heart.mp3')">🎵 How Do You Heal A Broken Heart</li>
+            <li onclick="playSong('I love you, goodbye.mp3')">🎵 I Love You, Goodbye</li>
+        </ul>
+
+        <audio id="player" class="player" controls>
     </div>
+
+    <script>
+        function playSong(filename) {
+            const player = document.getElementById('player');
+            player.src = filename;
+            player.play();
+        }
+    </script>
 </body>
 </html>
