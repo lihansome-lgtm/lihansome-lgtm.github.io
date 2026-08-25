@@ -48,7 +48,7 @@
         .track-list ul {
             list-style: none;
             padding-left: 0;
-            margin: 0;
+            margin: 0 0 18px 0;
         }
 
         .track-list li {
@@ -84,174 +84,12 @@
             }
         }
 
-        .player-container {
-            margin-top: 18px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .now-playing {
-            color: #ffdd00;
-            font-size: 12px;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-
-        .visualizer {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            height: 18px;
-            margin-bottom: 10px;
-            gap: 2px;
-        }
-
-        .bar {
-            width: 2px;
-            background-color: #ffffff;
-            border-radius: 2px;
-            animation: bounce 0.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes bounce {
-            from { height: 4px; }
-            to { height: 16px; }
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 10px;
-        }
-
-        .btn {
-            background: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .btn.main {
-            width: 48px;
-            height: 48px;
-            font-size: 18px;
-        }
-
-        .progress-wrap {
-            width: 100%;
-            margin-top: 8px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 2px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 2px;
-            cursor: pointer;
-        }
-
-        .progress-fill {
-            height: 100%;
-            width: 0%;
-            background: #ffffff;
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .progress-fill::after {
-            content: '';
-            position: absolute;
-            right: -5px;
-            top: -3px;
-            width: 9px;
-            height: 9px;
-            background: #ffffff;
-            border-radius: 50%;
-        }
-
-        .time-display {
-            display: flex;
-            justify-content: space-between;
-            font-size: 11px;
-            color: #ffffff;
-            margin-top: 4px;
-        }
-
-        .volume-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        .volume-icon {
-            color: #ffffff;
-            font-size: 16px;
-        }
-
-        .volume-slider {
-            width: 120px;
-            height: 2px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .volume-fill {
-            height: 100%;
-            width: 70%;
-            background: #ffffff;
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .volume-fill::after {
-            content: '';
-            position: absolute;
-            right: -5px;
-            top: -3px;
-            width: 9px;
-            height: 9px;
-            background: #ffffff;
-            border-radius: 50%;
-        }
-
-        .social-text {
-            margin-top: 12px;
-            margin-bottom: 8px;
-            color: #ffffff;
-            font-size: 13px;
-            font-style: italic;
-        }
-
-        .social-text span {
-            color: #ffdd00;
-            font-size: 16px;
-        }
-
+        /* SOCIAL BUTTONS - NASA IBABA NG SONG LIST */
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin: 10px 0 15px 0;
+            gap: 10px;
+            margin: 0 0 18px 0;
         }
 
         .social-btn {
@@ -275,169 +113,6 @@
 
         .social-btn.facebook {
             background: #1877f2;
-            border-radius: 50px;
-        }
-
-        .social-btn.facebook:hover {
-            background: transparent;
-            border-color: #1877f2;
-            color: #1877f2;
-        }
-
-        .social-btn.youtube {
-            background: #ff0000;
-            border-radius: 50px;
-        }
-
-        .social-btn.youtube:hover {
-            background: transparent;
-            border-color: #ff0000;
-            color: #ff0000;
-        }
-
-        .social-btn.tiktok {
-            background: #000000;
-            border-color: #ffffff;
-            border-radius: 50px;
-        }
-
-        .social-btn.tiktok:hover {
-            background: #ffffff;
-            color: #000000;
-        }
-
-        /* ========== Comment Section ========== */
-        .comment-section {
-            margin-top: 10px;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,60,0.6));
-            padding: 18px 20px;
-            border-radius: 12px;
-            width: 350px;
-            box-shadow: 0 0 18px rgba(100, 180, 255, 0.25);
-            border: 1px solid rgba(150, 200, 255, 0.3);
-            height: 100%;
-        }
-
-        .comment-section<[SILENT_never_used_51bce0c785ca2f68081bfa7d91973934]></think_never_used_51bce0c785ca2f68081bfa7d91973934>
-Opo Boss Niddo! Ilalagay natin ang tatlong social buttons **sa ibaba mismo ng song list**, nasa loob pa rin ng purple box para hindi ito hiwalay. Narito ang updated code:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broken Track List</title>
-    <style>
-        body {
-            background-image: url("Boss Niddo.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #ffffff;
-            padding-top: 40px;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        h2 {
-            font-size: 22px;
-            margin-top: 10px;
-            margin-bottom: 12px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        }
-
-        .main-wrapper {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-
-        .track-list {
-            margin-top: 10px;
-            text-align: left;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(30,10,50,0.6));
-            padding: 18px 20px;
-            border-radius: 12px;
-            font-size: 14px;
-            line-height: 1.6;
-            width: 380px;
-            box-shadow: 0 0 18px rgba(150, 50, 255, 0.3);
-            border: 1px solid rgba(200, 150, 255, 0.3);
-        }
-
-        .track-list ul {
-            list-style: none;
-            padding-left: 0;
-            margin: 0 0 15px 0;
-        }
-
-        .track-list li {
-            color: #ffdd00;
-            text-shadow: 1px 1px 3px #000000;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            padding: 3px 8px;
-            border-radius: 5px;
-        }
-
-        .track-list li:hover {
-            color: #ffffff;
-            background-color: rgba(255, 221, 0, 0.2);
-            padding-left: 12px;
-        }
-
-        .track-list li.playing {
-            color: #ffffff;
-            background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
-            box-shadow: 0 0 12px rgba(255, 200, 0, 0.6), 0 0 25px rgba(255, 150, 0, 0.3);
-            animation: glow 1.2s ease-in-out infinite alternate;
-            padding-left: 12px;
-            font-weight: bold;
-        }
-
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 8px rgba(255, 200, 0, 0.5), 0 0 15px rgba(255, 150, 0, 0.2);
-            }
-            to {
-                box-shadow: 0 0 15px rgba(255, 200, 0, 0.9), 0 0 30px rgba(255, 150, 0, 0.5);
-            }
-        }
-
-        /* Social Links - nasa ibaba ng song list */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 16px;
-            border-radius: 25px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .social-btn .icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        .social-btn.facebook {
-            background: #1877f2;
         }
 
         .social-btn.facebook:hover {
@@ -576,230 +251,8 @@ Opo Boss Niddo! Ilalagay natin ang tatlong social buttons **sa ibaba mismo ng so
         }
 
         .volume-wrap {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        .volume-icon {
-            color: #ffffff;
-            font-size: 16px;
-        }
-
-        .volume-slider {
-            width: 120px;
-            height: 2px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .volume-fill {
-            height: 100%;
-            width: 70%;
-            background: #ffffff;
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .volume-fill::after {
-            content: '';
-            position: absolute;
-            right: -5px;
-            top: -3px;
-            width: 9px;
-            height: 9px;
-            background: #ffffff;
-            border-radius: 50%;
-        }
-
-        .social-text {
-            margin-top: 12px;
-            margin-bottom: 8px;
-            color: #ffffff;
-            font-size: 13px;
-            font-style: italic;
-        }
-
-        .social-text span {
-            color: #ffdd00;
-            font-size: 16px;
-        }
-
-        /* ========== Comment Section ========== */
-        .comment-section {
-            margin-top: 10px;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,60,0.6));
-            padding: 18px 20px;
-            border-radius: 12px;
-            width: 350px;
-            box-shadow: 0 0 18px rgba(100, 180, 255, 0.25);
-            border: 1px solid rgba(150, 200, 255, 0.3);
-        }
-
-        .comment-section h3 {
-            color: #ffdd00;
-            font-size: 18px;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 3px #000;
-        }
-
-        .comment-input-area {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .comment-input-area input,
-        .comment-input-area textarea {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(0,0,0,0.4);
-            color: #ffffff;
-            font-size: 14px;
-            outline: none;
-        }
-
-        .comment-input-area input::placeholder,
-        .comment-input-area textarea::placeholder {
-            color: #cccccc;
-        }
-
-        .comment-input-area button {
-            padding: 10px 15px;
-            background: linear-gradient(90deg, #ffdd00, #ffaa00);
-            color: #000000;
-            border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .comment-input-area button:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 10px rgba(255, 221, 0, 0.5);
-        }
-
-        .comments-list {
-            max-height: 400px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .comment-item {
-            background: rgba(255,255,255,0.08);
-            padding: 10px 12px;
-            border-radius: 8px;
-            border-left: 3px solid #ffdd00;
-        }
-
-        .comment-name {
-            font-weight: bold;
-            color: #ffdd00;
-            font-size: 13px;
-            margin-bottom: 4px;
-        }
-
-        .comment-text {
-            font-size: 14px;
-            color: #ffffff;
-            line-height: 1.4;
-        }
-
-        .comment-time {
-            font-size: 11px;
-            color: #aaaaaa;
-            margin-top: 5px;
-        }
-
-        audio {
-            display: none;
-        }
-
-        @media (max-width: 800px) {
-            .main-wrapper {
-                flex-direction: column;
-            }
-
-            .track-list,
-            .comment-section {
-                width: 380px;
-            }
-
-            .social-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .social-btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h2>📋 Broken Track List &nbsp; 🎶 Cover Hugot 💔</h2>
-
-    <div class="main-wrapper">
-        <!-- LEFT SIDE: MUSIC PLAYER -->
-        <div class="track-list">
-            <ul id="songList">
-                <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
-                <li data-file="Andamanaya.mp3" onclick="playSong(this)">🎵 Andamanaya</li>
-                <li data-file="broken angel.mp3" onclick="playSong(this)">🎵 Broken Angel</li>
-                <li data-file="Do I have to cry for you.mp3" onclick="playSong(this)">🎵 Do I Have To Cry For You</li>
-                <li data-file="Fixing a broken heart.mp3" onclick="playSong(this)">🎵 Fixing A Broken Heart</li>
-                <li data-file="How do I live without you.mp3" onclick="playSong(this)">🎵 How Do I Live Without You</li>
-                <li data-file="How do you heal a broken heart.mp3" onclick="playSong(this)">🎵 How Do You Heal A Broken Heart</li>
-                <li data-file="I love you goodbye.mp3" onclick="playSong(this)">🎵 I Love You Goodbye</li>
-            </ul>
-
-            <!-- SOCIAL BUTTONS SA IBABA NG SONG LIST -->
-            <div class="social-links">
-                <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">
-                    <span class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82V14.706h-3.467v-4.05h3.467V7.235c0-3.424 2.095-5.288 5.165-5.288 1.467 0 2.726.11 3.093.159v3.587h-2.12c-1.215 0-1.45.578-1.45 1.425v2.55h2.89l-.377 4.05h-2.513V24h4.918c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
-                        </svg>
-                    </span>
-                    Facebook
-                </a>
-                <a href="https://www.youtube.com/@MyHansome23" target="_blank" class="social-btn youtube">
-                    <span class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.498 6.186a3.96 3.96 0 0 0-2.776-2.777C18.504 3.007 12 3.007 12 3.007s-6.504 0-8.722.402A3.96 3.96 0 0 0 .502 6.186C0 8.405 0 12 12s0 3.595.502 5.814a3.96 3.96 0 0 0 2.776 2.777c2.218.401 8.722.401 8.722.401s6.504 0 8.722-.401a3.96 3.96 0 0 0 2.776-2.777C24 15.595 24 12 24 12s0-3.595-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                    </span>
-                    YouTube
-                </a>
-                <a href="https://www.tiktok.com/@niddofias" target="_blank" class="social-btn tiktok">
-                    <span class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.525.02c1.164.048 2.326.072 3.488.072.362 0 .724-.012 1.085-.03.36-.018.72-.042 1.078-.072v3.53c-.358.03-.718.054-1.078.072-.361.018-.723.03-1.085.03-1.162 0-2.324-.024-3.488-.072v8.448c0 2.565-2.077 4.642-4.642 4.642-1.36 0-2.592-.534-3.507-1.408A4.642 4.642 0 0 1 5.257 12.6c0-2.565 2.077-4.642 4.642-4.642.323 0 .637.042.938.117V4.485c-.3-.03-.615-.054-.938-.072C7.237 4.305 5.005 6.61 5.005 9.6v.06c0 3.545 2.955 6.5 6.5 6.5s6.5-2.955 6.5-6.5V5.72c.915.69 1.995 1.125 3.12 1.125v-3.54c-1.125 0-2.205-.435-3.12-1.125z"/>
-                        </svg>
-                    </span>
-                    TikTok
-                </a>
-            </div>
-
-            <div<[SILENT_never_used_51bce0c785ca2f68081bfa7d91973934]></think_never_used_51bce0c785ca2f68081bfa7d91973934>
-Opo Boss Niddo! Ilalagay natin ang tatlong social buttons **sa ibaba mismo ng song list**, nasa loob pa rin ng purple box para mas malinis at dikit sa song list.
-
-Narito ang **buong updated code**:
+            display: flex<[SILENT_never_used_51bce0c785ca2f68081bfa7d91973934]></think_never_used_51bce0c785ca2f68081bfa7d91973934>
+Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papaliitin natin para hindi masyadong malaki ang sakop. Narito ang updated code:
 
 ```html
 <!DOCTYPE html>
@@ -1095,55 +548,45 @@ Narito ang **buong updated code**:
             border-radius: 50%;
         }
 
-        .social-text {
-            margin-top: 12px;
-            margin-bottom: 8px;
-            color: #ffffff;
-            font-size: 13px;
-            font-style: italic;
-        }
-
-        .social-text span {
-            color: #ffdd00;
-            font-size: 16px;
-        }
-
-        /* ========== COMMENT SECTION ========== */
+        /* ========== COMMENT SECTION - NASA KANANG IBABA AT PALIIT ========== */
         .comment-section {
-            margin-top: 10px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,60,0.6));
-            padding: 18px 20px;
+            padding: 12px 15px;
             border-radius: 12px;
-            width: 350px;
+            width: 280px;
             box-shadow: 0 0 18px rgba(100, 180, 255, 0.25);
             border: 1px solid rgba(150, 200, 255, 0.3);
+            z-index: 9999;
         }
 
         .comment-section h3 {
             color: #ffdd00;
-            font-size: 18px;
+            font-size: 15px;
             margin-top: 0;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-shadow: 1px 1px 3px #000;
         }
 
         .comment-input-area {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-bottom: 15px;
+            gap: 6px;
+            margin-bottom: 10px;
         }
 
         .comment-input-area input,
         .comment-input-area textarea {
             width: 100%;
             box-sizing: border-box;
-            padding: 10px;
-            border-radius: 8px;
+            padding: 8px;
+            border-radius: 6px;
             border: 1px solid rgba(255,255,255,0.2);
             background: rgba(0,0,0,0.4);
             color: #ffffff;
-            font-size: 14px;
+            font-size: 13px;
             outline: none;
         }
 
@@ -1153,12 +596,12 @@ Narito ang **buong updated code**:
         }
 
         .comment-input-area button {
-            padding: 10px 15px;
+            padding: 8px 12px;
             background: linear-gradient(90deg, #ffdd00, #ffaa00);
             color: #000000;
             border: none;
-            border-radius: 8px;
-            font-size: 14px;
+            border-radius: 6px;
+            font-size: 13px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -1170,37 +613,37 @@ Narito ang **buong updated code**:
         }
 
         .comments-list {
-            max-height: 400px;
+            max-height: 250px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .comment-item {
             background: rgba(255,255,255,0.08);
-            padding: 10px 12px;
-            border-radius: 8px;
+            padding: 8px 10px;
+            border-radius: 6px;
             border-left: 3px solid #ffdd00;
         }
 
         .comment-name {
             font-weight: bold;
             color: #ffdd00;
-            font-size: 13px;
-            margin-bottom: 4px;
+            font-size: 12px;
+            margin-bottom: 3px;
         }
 
         .comment-text {
-            font-size: 14px;
+            font-size: 13px;
             color: #ffffff;
             line-height: 1.4;
         }
 
         .comment-time {
-            font-size: 11px;
+            font-size: 10px;
             color: #aaaaaa;
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
         audio {
@@ -1212,8 +655,7 @@ Narito ang **buong updated code**:
                 flex-direction: column;
             }
 
-            .track-list,
-            .comment-section {
+            .track-list {
                 width: 380px;
             }
 
@@ -1225,6 +667,14 @@ Narito ang **buong updated code**:
             .social-btn {
                 width: 100%;
                 justify-content: center;
+            }
+
+            .comment-section {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                width: 380px;
+                margin-top: 20px;
             }
         }
     </style>
@@ -1247,7 +697,7 @@ Narito ang **buong updated code**:
                 <li data-file="I love you goodbye.mp3" onclick="playSong(this)">🎵 I Love You Goodbye</li>
             </ul>
 
-            <!-- 🔽 SOCIAL BUTTONS: NASA IBABA NG SONG LIST -->
+            <!-- SOCIAL BUTTONS - NASA IBABA NG SONG LIST -->
             <div class="social-links">
                 <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">
                     <span class="icon">
@@ -1305,21 +755,21 @@ Narito ang **buong updated code**:
                 <audio id="player"></audio>
             </div>
         </div>
+    </div>
 
-        <!-- RIGHT SIDE: COMMENT SECTION -->
-        <div class="comment-section">
-            <h3>💬 Comment Section</h3>
-            <p style="font-size:12px; color:#ccc; margin:0 0 10px 0;">May tanong o mensahe? Iwan mo dito! 👇</p>
+    <!-- COMMENT SECTION - NASA KANANG IBABA -->
+    <div class="comment-section">
+        <h3>💬 Comment Section</h3>
+        <p style="font-size:11px; color:#ccc; margin:0 0 10px 0;">May tanong o mensahe? Iwan mo dito!</p>
 
-            <div class="comment-input-area">
-                <input type="text" id="commenterName" placeholder="Ang iyong pangalan..." maxlength="30">
-                <textarea id="commentText" rows="4" placeholder="Isulat ang iyong komento o tanong dito..." maxlength="500"></textarea>
-                <button onclick="addComment()">📤 Ipadala ang Komento</button>
-            </div>
+        <div class="comment-input-area">
+            <input type="text" id="commenterName" placeholder="Pangalan..." maxlength="30">
+            <textarea id="commentText" rows="3" placeholder="Komento..." maxlength="500"></textarea>
+            <button onclick="addComment()">📤 Ipadala</button>
+        </div>
 
-            <div class="comments-list" id="commentsList">
-                <!-- Mga komento ay lalabas d -->
-            </div>
+        <div class="comments-list" id="commentsList">
+            <!-- Mga komento ay lalabas dito -->
         </div>
     </div>
 
