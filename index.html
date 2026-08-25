@@ -63,14 +63,12 @@
             border-radius: 8px;
         }
 
-        /* ✅ HABANG PINIPINDI */
         .track-list li:hover {
             color: #ffffff;
             background-color: rgba(255, 221, 0, 0.2);
             padding-left: 15px;
         }
 
-        /* ✅ KAPAG TUMUTUGTOK — MAY GLOWING EFFECT! */
         .track-list li.playing {
             color: #ffffff;
             background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
@@ -80,7 +78,6 @@
             font-weight: bold;
         }
 
-        /* ✅ KUMUKUTITAP NA EFFECT */
         @keyframes glow {
             from {
                 box-shadow: 0 0 10px rgba(255, 200, 0, 0.5), 0 0 20px rgba(255, 150, 0, 0.2);
@@ -128,7 +125,7 @@
         </ul>
 
         <div class="player-container">
-            <div class="now-playing" id="nowPlaying">✅ Pumili ng kanta upang patugtugin...</div>
+            <div class="now-playing" id="nowPlaying">Select a song to play...</div>
             <audio id="player" class="player" controls>
         </div>
     </div>
@@ -147,19 +144,15 @@
         };
 
         function playSong(element, filename) {
-            // ✅ TANGGALIN ANG EFFECT SA IBA
             if (currentPlaying) {
                 currentPlaying.classList.remove('playing');
             }
 
-            // ✅ ILAGAY ANG EFFECT SA PINIPINDOT
             element.classList.add('playing');
             currentPlaying = element;
 
-            // ✅ IPAKITA ANG PANGALAN NG KANTA
-            document.getElementById('nowPlaying').textContent = '🎶 Tumatugtog: ' + songNames[filename];
+            document.getElementById('nowPlaying').textContent = '🎶 Now Playing: ' + songNames[filename];
 
-            // ✅ PATUGTOGIN ANG KANTA
             const player = document.getElementById('player');
             player.src = filename;
             player.play();
