@@ -76,7 +76,6 @@
             }
         }
 
-        /* ✅ CUSTOM WHITE PLAYER STYLE */
         .player-container {
             margin-top: 25px;
             padding: 20px;
@@ -92,7 +91,6 @@
             font-style: italic;
         }
 
-        /* ✅ VISUALIZER / BARS ON TOP */
         .visualizer {
             display: flex;
             justify-content: center;
@@ -112,7 +110,6 @@
             to { height: 20px; }
         }
 
-        /* ✅ CONTROL BUTTONS — WHITE CIRCLES */
         .controls {
             display: flex;
             justify-content: center;
@@ -143,7 +140,6 @@
             font-size: 20px;
         }
 
-        /* ✅ PROGRESS BAR & TIME */
         .progress-wrap {
             width: 100%;
             margin-top: 10px;
@@ -180,7 +176,54 @@
             margin-top: 5px;
         }
 
-        audio { display: none; } /* ✅ ITAGO ANG DEFAULT PLAYER */
+        /* ✅ SOCIAL MEDIA BUTTONS */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 25px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-btn.facebook {
+            background: #1877f2;
+        }
+        .social-btn.facebook:hover {
+            background: transparent;
+            border-color: #1877f2;
+            color: #1877f2;
+        }
+
+        .social-btn.youtube {
+            background: #ff0000;
+        }
+        .social-btn.youtube:hover {
+            background: transparent;
+            border-color: #ff0000;
+            color: #ff0000;
+        }
+
+        .social-btn.tiktok {
+            background: #000000;
+            border-color: #ffffff;
+        }
+        .social-btn.tiktok:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        audio { display: none; }
     </style>
 </head>
 <body>
@@ -201,17 +244,14 @@
         <div class="player-container">
             <div class="now-playing" id="nowPlaying">Select a song to play...</div>
 
-            <!-- ✅ VISUALIZER BARS -->
             <div class="visualizer" id="visualizer"></div>
 
-            <!-- ✅ CUSTOM WHITE BUTTONS -->
             <div class="controls">
                 <button class="btn" onclick="prevSong()">&#9664;</button>
                 <button class="btn main" id="playBtn" onclick="togglePlay()">&#9654;</button>
                 <button class="btn" onclick="nextSong()">&#9654;</button>
             </div>
 
-            <!-- ✅ PROGRESS BAR & TIME -->
             <div class="progress-wrap" onclick="seekTo(event)">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
@@ -220,6 +260,13 @@
                     <span id="currTime">00:00</span>
                     <span id="durTime">00:00</span>
                 </div>
+            </div>
+
+            <!-- ✅ SOCIAL MEDIA BUTTONS -->
+            <div class="social-links">
+                <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">Facebook</a>
+                <a href="http://www.youtube.com/user/MyHansome23" target="_blank" class="social-btn youtube">YouTube</a>
+                <a href="https://www.tiktok.com/@niddofias" target="_blank" class="social-btn tiktok">TikTok</a>
             </div>
 
             <audio id="player">
@@ -257,7 +304,6 @@
         const durTimeEl = document.getElementById('durTime');
         const visualizer = document.getElementById('visualizer');
 
-        // ✅ CREATE VISUALIZER BARS
         for(let i=0; i<20; i++) {
             const bar = document.createElement('div');
             bar.className = 'bar';
@@ -309,7 +355,6 @@
             }
         }
 
-        // ✅ UPDATE PROGRESS & TIME
         player.addEventListener('timeupdate', () => {
             if (player.duration) {
                 const percent = (player.currentTime / player.duration) * 100;
