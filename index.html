@@ -76,51 +76,169 @@
             }
         }
 
+        /* ✅ CUSTOM WHITE PLAYER STYLE */
         .player-container {
-            margin-top: 20px;
-            padding: 12px 15px;
-            background: rgba(0, 0, 0, 0.5);
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
             border-radius: 12px;
-            box-shadow: 0 0 15px rgba(100, 200, 255, 0.2);
-        }
-
-        .player {
-            width: 100%;
-            height: 40px;
-            margin-top: 8px;
+            text-align: center;
         }
 
         .now-playing {
             color: #ffdd00;
             font-size: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             font-style: italic;
         }
+
+        /* ✅ VISUALIZER / BARS ON TOP */
+        .visualizer {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 25px;
+            margin-bottom: 15px;
+            gap: 2px;
+        }
+        .bar {
+            width: 3px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            animation: bounce 0.5s ease-in-out infinite alternate;
+        }
+        @keyframes bounce {
+            from { height: 5px; }
+            to { height: 20px; }
+        }
+
+        /* ✅ CONTROL BUTTONS — WHITE CIRCLES */
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 15px;
+        }
+        .btn {
+            background: transparent;
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .btn.main {
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
+        }
+
+        /* ✅ PROGRESS BAR & TIME */
+        .progress-wrap {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 3px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #ffffff;
+            border-radius: 3px;
+            position: relative;
+        }
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: -4px;
+            width: 11px;
+            height: 11px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #ffffff;
+            margin-top: 5px;
+        }
+
+        audio { display: none; } /* ✅ ITAGO ANG DEFAULT PLAYER */
     </style>
 </head>
 <body>
 
     <h2>📋 Broken Track List &nbsp; 🎶 Cover Hugot 💔</h2>
     <div class="track-list">
-        <ul>
-            <li onclick="playSong(this, 'Alone.mp3')">🎵 Alone</li>
-            <li onclick="playSong(this, 'Andamanaya.mp3')">🎵 Andamanaya</li>
-            <li onclick="playSong(this, 'broken angel.mp3')">🎵 Broken Angel</li>
-            <li onclick="playSong(this, 'Do I have to cry for you.mp3')">🎵 Do I Have To Cry For You</li>
-            <li onclick="playSong(this, 'Fixing a broken heart.mp3')">🎵 Fixing A Broken Heart</li>
-            <li onclick="playSong(this, 'How do I live without you.mp3')">🎵 How Do I Live Without You</li>
-            <li onclick="playSong(this, 'How do you heal a broken heart.mp3')">🎵 How Do You Heal A Broken Heart</li>
-            <li onclick="playSong(this, 'I love you, goodbye.mp3')">🎵 I Love You Goodbye</li>
+        <ul id="songList">
+            <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
+            <li data-file="Andamanaya.mp3" onclick="playSong(this)">🎵 Andamanaya</li>
+            <li data-file="broken angel.mp3" onclick="playSong(this)">🎵 Broken Angel</li>
+            <li data-file="Do I have to cry for you.mp3" onclick="playSong(this)">🎵 Do I Have To Cry For You</li>
+            <li data-file="Fixing a broken heart.mp3" onclick="playSong(this)">🎵 Fixing A Broken Heart</li>
+            <li data-file="How do I live without you.mp3" onclick="playSong(this)">🎵 How Do I Live Without You</li>
+            <li data-file="How do you heal a broken heart.mp3" onclick="playSong(this)">🎵 How Do You Heal A Broken Heart</li>
+            <li data-file="I love you, goodbye.mp3" onclick="playSong(this)">🎵 I Love You Goodbye</li>
         </ul>
 
         <div class="player-container">
             <div class="now-playing" id="nowPlaying">Select a song to play...</div>
-            <audio id="player" class="player" controls>
+
+            <!-- ✅ VISUALIZER BARS -->
+            <div class="visualizer" id="visualizer"></div>
+
+            <!-- ✅ CUSTOM WHITE BUTTONS -->
+            <div class="controls">
+                <button class="btn" onclick="prevSong()">&#9664;</button>
+                <button class="btn main" id="playBtn" onclick="togglePlay()">&#9654;</button>
+                <button class="btn" onclick="nextSong()">&#9654;</button>
+            </div>
+
+            <!-- ✅ PROGRESS BAR & TIME -->
+            <div class="progress-wrap" onclick="seekTo(event)">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-display">
+                    <span id="currTime">00:00</span>
+                    <span id="durTime">00:00</span>
+                </div>
+            </div>
+
+            <audio id="player">
         </div>
     </div>
 
     <script>
         let currentPlaying = null;
+        let currentIndex = -1;
+        const songFiles = [
+            'Alone.mp3',
+            'Andamanaya.mp3',
+            'broken angel.mp3',
+            'Do I have to cry for you.mp3',
+            'Fixing a broken heart.mp3',
+            'How do I live without you.mp3',
+            'How do you heal a broken heart.mp3',
+            'I love you, goodbye.mp3'
+        ];
         const songNames = {
             'Alone.mp3': 'Alone',
             'Andamanaya.mp3': 'Andamanaya',
@@ -132,19 +250,83 @@
             'I love you, goodbye.mp3': 'I Love You Goodbye'
         };
 
-        function playSong(element, filename) {
-            if (currentPlaying) {
-                currentPlaying.classList.remove('playing');
-            }
+        const player = document.getElementById('player');
+        const playBtn = document.getElementById('playBtn');
+        const progressFill = document.getElementById('progressFill');
+        const currTimeEl = document.getElementById('currTime');
+        const durTimeEl = document.getElementById('durTime');
+        const visualizer = document.getElementById('visualizer');
 
+        // ✅ CREATE VISUALIZER BARS
+        for(let i=0; i<20; i++) {
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+            bar.style.animationDelay = `${i*0.05}s`;
+            visualizer.appendChild(bar);
+        }
+
+        function playSong(element) {
+            if (currentPlaying) currentPlaying.classList.remove('playing');
             element.classList.add('playing');
             currentPlaying = element;
 
-            document.getElementById('nowPlaying').textContent = '🎶 Now Playing: ' + songNames[filename];
-
-            const player = document.getElementById('player');
-            player.src = filename;
+            const file = element.dataset.file;
+            currentIndex = songFiles.indexOf(file);
+            document.getElementById('nowPlaying').textContent = '🎶 Now Playing: ' + songNames[file];
+            player.src = file;
             player.play();
+            playBtn.innerHTML = '&#10074;&#10074;';
+        }
+
+        function togglePlay() {
+            if (currentIndex === -1) return;
+            if (player.paused) {
+                player.play();
+                playBtn.innerHTML = '&#10074;&#10074;';
+            } else {
+                player.pause();
+                playBtn.innerHTML = '&#9654;';
+            }
+        }
+
+        function prevSong() {
+            if (currentIndex <= 0) return;
+            const items = document.querySelectorAll('#songList li');
+            playSong(items[currentIndex - 1]);
+        }
+
+        function nextSong() {
+            if (currentIndex >= songFiles.length - 1) return;
+            const items = document.querySelectorAll('#songList li');
+            playSong(items[currentIndex + 1]);
+        }
+
+        function seekTo(e) {
+            if (player.duration) {
+                const rect = e.target.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                player.currentTime = percent * player.duration;
+            }
+        }
+
+        // ✅ UPDATE PROGRESS & TIME
+        player.addEventListener('timeupdate', () => {
+            if (player.duration) {
+                const percent = (player.currentTime / player.duration) * 100;
+                progressFill.style.width = percent + '%';
+                currTimeEl.textContent = formatTime(player.currentTime);
+                durTimeEl.textContent = formatTime(player.duration);
+            }
+        });
+
+        player.addEventListener('ended', nextSong);
+        player.addEventListener('pause', () => playBtn.innerHTML = '&#9654;');
+        player.addEventListener('play', () => playBtn.innerHTML = '&#10074;&#10074;');
+
+        function formatTime(sec) {
+            const m = Math.floor(sec/60);
+            const s = Math.floor(sec%60);
+            return `${m<10?'0':''}${m}:${s<10?'0':''}${s}`;
         }
     </script>
 </body>
