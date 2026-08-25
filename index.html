@@ -55,204 +55,14 @@
             color: #ffdd00;
             text-shadow: 1px 1px 3px #000000;
             cursor: pointer;
-            transition: all 0.4s ease;
-            padding: 3px 8px;
-            border-radius: 5px;
-        }
+   <|FunctionExecute|>
+Pasensya na Boss Niddo, mukhang nagkaroon ng mali sa huling code na na-paste. Ibabalik natin sa malinis at maayos na setup:
 
-        .track-list li:hover {
-            color: #ffffff;
-            background-color: rgba(255, 221, 0, 0.2);
-            padding-left: 12px;
-        }
+✅ **Song List + Player** – nasa kaliwa  
+✅ **Social Buttons** – nasa ibaba ng song list  
+✅ **Comment Section** – nasa kanang ibaba, maliit lang at hindi nakaharang
 
-        .track-list li.playing {
-            color: #ffffff;
-            background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
-            box-shadow: 0 0 12px rgba(255, 200, 0, 0.6), 0 0 25px rgba(255, 150, 0, 0.3);
-            animation: glow 1.2s ease-in-out infinite alternate;
-            padding-left: 12px;
-            font-weight: bold;
-        }
-
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 8px rgba(255, 200, 0, 0.5), 0 0 15px rgba(255, 150, 0, 0.2);
-            }
-            to {
-                box-shadow: 0 0 15px rgba(255, 200, 0, 0.9), 0 0 30px rgba(255, 150, 0, 0.5);
-            }
-        }
-
-        /* SOCIAL BUTTONS - NASA IBABA NG SONG LIST */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 0 0 18px 0;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 13px 18px;
-            border-radius: 25px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .social-btn .icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        .social-btn.facebook {
-            background: #1877f2;
-        }
-
-        .social-btn.facebook:hover {
-            background: transparent;
-            border-color: #1877f2;
-            color: #1877f2;
-        }
-
-        .social-btn.youtube {
-            background: #ff0000;
-        }
-
-        .social-btn.youtube:hover {
-            background: transparent;
-            border-color: #ff0000;
-            color: #ff0000;
-        }
-
-        .social-btn.tiktok {
-            background: #000000;
-            border-color: #ffffff;
-        }
-
-        .social-btn.tiktok:hover {
-            background: #ffffff;
-            color: #000000;
-        }
-
-        .player-container {
-            margin-top: 18px;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .now-playing {
-            color: #ffdd00;
-            font-size: 12px;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-
-        .visualizer {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            height: 18px;
-            margin-bottom: 10px;
-            gap: 2px;
-        }
-
-        .bar {
-            width: 2px;
-            background-color: #ffffff;
-            border-radius: 2px;
-            animation: bounce 0.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes bounce {
-            from { height: 4px; }
-            to { height: 16px; }
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 10px;
-        }
-
-        .btn {
-            background: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .btn.main {
-            width: 48px;
-            height: 48px;
-            font-size: 18px;
-        }
-
-        .progress-wrap {
-            width: 100%;
-            margin-top: 8px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 2px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 2px;
-            cursor: pointer;
-        }
-
-        .progress-fill {
-            height: 100%;
-            width: 0%;
-            background: #ffffff;
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .progress-fill::after {
-            content: '';
-            position: absolute;
-            right: -5px;
-            top: -3px;
-            width: 9px;
-            height: 9px;
-            background: #ffffff;
-            border-radius: 50%;
-        }
-
-        .time-display {
-            display: flex;
-            justify-content: space-between;
-            font-size: 11px;
-            color: #ffffff;
-            margin-top: 4px;
-        }
-
-        .volume-wrap {
-            display: flex<[SILENT_never_used_51bce0c785ca2f68081bfa7d91973934]></think_never_used_51bce0c785ca2f68081bfa7d91973934>
-Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papaliitin natin para hindi masyadong malaki ang sakop. Narito ang updated code:
+Narito ang **buong maayos na code**:
 
 ```html
 <!DOCTYPE html>
@@ -341,7 +151,6 @@ Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papali
             }
         }
 
-        /* SOCIAL BUTTONS - NASA IBABA NG SONG LIST */
         .social-links {
             display: flex;
             justify-content: center;
@@ -548,7 +357,6 @@ Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papali
             border-radius: 50%;
         }
 
-        /* ========== COMMENT SECTION - NASA KANANG IBABA AT PALIIT ========== */
         .comment-section {
             position: fixed;
             bottom: 20px;
@@ -684,7 +492,6 @@ Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papali
     <h2>📋 Broken Track List &nbsp; 🎶 Cover Hugot 💔</h2>
 
     <div class="main-wrapper">
-        <!-- LEFT SIDE: MUSIC PLAYER -->
         <div class="track-list">
             <ul id="songList">
                 <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
@@ -697,7 +504,6 @@ Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papali
                 <li data-file="I love you goodbye.mp3" onclick="playSong(this)">🎵 I Love You Goodbye</li>
             </ul>
 
-            <!-- SOCIAL BUTTONS - NASA IBABA NG SONG LIST -->
             <div class="social-links">
                 <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">
                     <span class="icon">
@@ -757,7 +563,6 @@ Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papali
         </div>
     </div>
 
-    <!-- COMMENT SECTION - NASA KANANG IBABA -->
     <div class="comment-section">
         <h3>💬 Comment Section</h3>
         <p style="font-size:11px; color:#ccc; margin:0 0 10px 0;">May tanong o mensahe? Iwan mo dito!</p>
@@ -768,9 +573,7 @@ Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papali
             <button onclick="addComment()">📤 Ipadala</button>
         </div>
 
-        <div class="comments-list" id="commentsList">
-            <!-- Mga komento ay lalabas dito -->
-        </div>
+        <div class="comments-list" id="commentsList"></div>
     </div>
 
     <script>
@@ -885,7 +688,6 @@ Opo Boss Niddo! Gawin nating **nasa kanang ibaba** ang comment section at papali
             return `${m<10?'0':''}${m}:${s<10?'0':''}${s}`;
         }
 
-        // COMMENT SYSTEM
         const STORAGE_KEY = 'bossniddo_comments';
 
         function loadComments() {
