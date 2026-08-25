@@ -213,14 +213,28 @@
             border-radius: 50%;
         }
 
+        /* ✅ SOCIAL MEDIA TEXT & BUTTONS WITH ICONS */
+        .social-text {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .social-text span {
+            color: #ffdd00;
+            font-size: 18px;
+        }
+
         .social-links {
-            margin-top: 20px;
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 15px;
         }
         .social-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 10px 18px;
             border-radius: 25px;
             color: #ffffff;
@@ -229,6 +243,9 @@
             font-weight: bold;
             transition: all 0.3s ease;
             border: 2px solid transparent;
+        }
+        .social-btn .icon {
+            font-size: 18px;
         }
         .social-btn.facebook { background: #1877f2; }
         .social-btn.facebook:hover { background: transparent; border-color: #1877f2; color: #1877f2; }
@@ -282,10 +299,21 @@
                 </div>
             </div>
 
+            <!-- ✅ NEW: TEXT WITH ARROW + ICONS ON BUTTONS -->
+            <div class="social-text">
+                Don't forget to follow my social media accounts here <span>⤵</span>
+            </div>
+
             <div class="social-links">
-                <a href="https://www.facebook.com/niddoflas" target="_blank" class="social-btn facebook">Facebook</a>
-                <a href="https://www.youtube.com/@MyIensome23" target="_blank" class="social-btn youtube">YouTube</a>
-                <a href="https://www.tiktok.com/@niddoflas" target="_blank" class="social-btn tiktok">TikTok</a>
+                <a href="https://www.facebook.com/niddoflas" target="_blank" class="social-btn facebook">
+                    <span class="icon">📘</span> Facebook
+                </a>
+                <a href="https://www.youtube.com/@MyIensome23" target="_blank" class="social-btn youtube">
+                    <span class="icon">▶️</span> YouTube
+                </a>
+                <a href="https://www.tiktok.com/@niddoflas" target="_blank" class="social-btn tiktok">
+                    <span class="icon">🎵</span> TikTok
+                </a>
             </div>
 
             <audio id="player">
