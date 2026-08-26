@@ -6,19 +6,61 @@
     <title>Broken Track List</title>
     <style>
         body {
-            background-image: url("Boss Niddo3.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #050505 0%, #111111 50%, #080808 100%);
             color: #ffffff;
             padding-top: 10px;
             font-family: Arial, sans-serif;
             margin: 0;
             padding-left: 20px;
             padding-right: 20px;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* ✅ WELCOME — 3D Style */
+        /* ✅ BACKGROUND: Malaking Boss Niddo Green Neon */
+        .bg-neon-boss {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 180px;
+            font-weight: 900;
+            letter-spacing: 20px;
+            color: rgba(0, 255, 65, 0.08);
+            text-shadow:
+                0 0 20px rgba(0, 255, 65, 0.3),
+                0 0 40px rgba(0, 255, 65, 0.2),
+                0 0 80px rgba(0, 255, 65, 0.15);
+            z-index: -2;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        /* ✅ Live Stage Light Effect */
+        .stage-light {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center top, rgba(0,255,65,0.05), transparent 40%),
+                        radial-gradient(circle at 20% 20%, rgba(255,46,235,0.05), transparent 40%),
+                        radial-gradient(circle at 80% 20%, rgba(0,170,255,0.05), transparent 40%);
+            z-index: -1;
+            pointer-events: none;
+            animation: stage-pulse 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes stage-pulse {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+
+        /* ✅ WELCOME — 3D Neon Style */
         .neon-welcome {
             text-align: center;
             font-size: 72px;
@@ -60,6 +102,7 @@
             }
         }
 
+        /* ✅ BOSS NIDDO — Green Neon Sign Style */
         .boss-niddo {
             text-align: center;
             font-size: 72px;
@@ -79,7 +122,27 @@
             font-family: Arial, sans-serif;
         }
 
-        /* ✅ HitForgeStudio — Neon Sign Blue Light Style */
+        @keyframes neon-green-glow {
+            from {
+                text-shadow:
+                    3px 3px 0 #005511,
+                    6px 6px 0 #003308,
+                    0 0 8px #00ff41,
+                    0 0 15px #00ff41,
+                    0 0 30px #00ff41;
+            }
+            to {
+                text-shadow:
+                    3px 3px 0 #005511,
+                    6px 6px 0 #003308,
+                    0 0 12px #00ff41,
+                    0 0 25px #00ff41,
+                    0 0 45px #00ff41,
+                    0 0 80px #00dd38;
+            }
+        }
+
+        /* ✅ HitForgeStudio — Blue Neon Sign Style */
         .hit-forge {
             text-align: center;
             font-size: 38px;
@@ -102,7 +165,7 @@
             width: 100%;
         }
 
-        /* ✅ Neon Sign Stand — parang nakatayong ilaw */
+        /* ✅ Neon Sign Stand */
         .hit-forge::before,
         .hit-forge::after {
             content: '';
@@ -142,6 +205,7 @@
             }
         }
 
+        /* ✅ MUSIC PRODUCTION — Yellow Neon Style */
         .music-production {
             text-align: center;
             font-size: 28px;
@@ -157,26 +221,6 @@
             margin-top: 20px;
             margin-bottom: 15px;
             font-family: Arial, sans-serif;
-        }
-
-        @keyframes neon-green-glow {
-            from {
-                text-shadow:
-                    3px 3px 0 #005511,
-                    6px 6px 0 #003308,
-                    0 0 8px #00ff41,
-                    0 0 15px #00ff41,
-                    0 0 30px #00ff41;
-            }
-            to {
-                text-shadow:
-                    3px 3px 0 #005511,
-                    6px 6px 0 #003308,
-                    0 0 12px #00ff41,
-                    0 0 25px #00ff41,
-                    0 0 45px #00ff41,
-                    0 0 80px #00dd38;
-            }
         }
 
         @keyframes neon-yellow-green-glow {
@@ -208,7 +252,7 @@
             margin-top: -60px;
         }
 
-        /* ✅ PINAKA TAAS NA — Song List Box */
+        /* ✅ Song List — Nasa Pinakataas na! */
         .track-list {
             margin-top: 0;
             text-align: left;
@@ -261,6 +305,7 @@
             animation: glow 1.2s ease-in-out infinite alternate;
             padding-left: 8px;
             font-weight: bold;
+            margin-bottom: 2px;
         }
 
         @keyframes glow {
@@ -326,7 +371,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
         .btn:hover {
             background: rgba(255,255,255,0.2);
@@ -335,6 +380,7 @@
             width: 30px;
             height: 30px;
             font-size: 12px;
+            font-weight: bold;
         }
 
         .progress-wrap {
@@ -419,6 +465,7 @@
             font-weight: bold;
             color: #ffdd00;
             margin-bottom: 4px;
+            margin-top: 2px;
         }
 
         .arrows-line {
@@ -460,7 +507,7 @@
             text-decoration: none;
             font-size: 10px;
             font-weight: bold;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
 
         .social-btn .icon {
@@ -478,7 +525,6 @@
             background: #166FE5;
             transform: scale(1.05);
         }
-
         .social-btn.youtube {
             background: #FF0000;
         }
@@ -486,7 +532,6 @@
             background: #CC0000;
             transform: scale(1.05);
         }
-
         .social-btn.tiktok {
             background: #000000;
             border: 1px solid #25F4EE;
@@ -546,7 +591,7 @@
             font-size: 11px;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
         .comment-input-area button:hover {
             transform: scale(1.03);
@@ -601,6 +646,10 @@
                 font-size: 16px;
                 letter-spacing: 3px;
             }
+            .bg-neon-boss {
+                font-size: 80px;
+                letter-spacing: 10px;
+            }
             .main-wrapper { flex-direction: column; margin-top: 0; }
             .track-list { width: 230px; }
             .comment-section {
@@ -614,6 +663,12 @@
     </style>
 </head>
 <body>
+
+    <!-- ✅ Background: Malaking BOSS NIDDO Green Neon -->
+    <div class="bg-neon-boss">BOSS NIDDO</div>
+
+    <!-- ✅ Stage Light Effect -->
+    <div class="stage-light"></div>
 
     <div class="neon-welcome">WELCOME</div>
     <h1 class="boss-niddo">BOSS NIDDO</h1>
@@ -638,7 +693,7 @@
                 <li data-file="I need someone like you.mp3" onclick="playSong(this)">🎵 I Need Someone Like You</li>
                 <li data-file="kakalimutan na kita.mp3" onclick="playSong(this)">🎵 Kakalimutan Na Kita</li>
                 <li data-file="love is gone.mp3" onclick="playSong(this)">🎵 Love Is Gone</li>
-                <li data-file="Love move's in mysterious way.mp3" onclick="playSong(this)">🎵 Love Moves In Mysterious Way</li>
+                <li data-file="Love moves in mysterious way.mp3" onclick="playSong(this)">🎵 Love Moves In Mysterious Way</li>
                 <li data-file="one last cry.mp3" onclick="playSong(this)">🎵 One Last Cry</li>
                 <li data-file="One More Chance.mp3" onclick="playSong(this)">🎵 One More Chance</li>
                 <li data-file="Only reminds me of you.mp3" onclick="playSong(this)">🎵 Only Reminds Me Of You</li>
@@ -732,7 +787,7 @@
             'I need someone like you.mp3',
             'kakalimutan na kita.mp3',
             'love is gone.mp3',
-            'Love move\'s in mysterious way.mp3',
+            'Love moves in mysterious way.mp3',
             'one last cry.mp3',
             'One More Chance.mp3',
             'Only reminds me of you.mp3'
@@ -750,7 +805,7 @@
             'I need someone like you.mp3': 'I Need Someone Like You',
             'kakalimutan na kita.mp3': 'Kakalimutan Na Kita',
             'love is gone.mp3': 'Love Is Gone',
-            'Love move\'s in mysterious way.mp3': 'Love Moves In Mysterious Way',
+            'Love moves in mysterious way.mp3': 'Love Moves In Mysterious Way',
             'one last cry.mp3': 'One Last Cry',
             'One More Chance.mp3': 'One More Chance',
             'Only reminds me of you.mp3': 'Only Reminds Me Of You'
