@@ -82,6 +82,18 @@
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
 
+        /* ✅ SONG LIST COVER — BLUE */
+        .song-list-title {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #00aaff;
+            text-shadow: 0 0 8px rgba(0, 170, 255, 0.8), 0 0 16px rgba(0, 170, 255, 0.5);
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 170, 255, 0.3);
+        }
+
         .track-list ul {
             list-style: none;
             padding-left: 0;
@@ -89,8 +101,8 @@
         }
 
         .track-list li {
-            color: #ffdd00;
-            text-shadow: 1px 1px 3px #000000;
+            color: #00ff41;
+            text-shadow: 1px 1px 3px #000000, 0 0 8px rgba(0, 255, 65, 0.6);
             cursor: pointer;
             transition: all 0.4s ease;
             padding: 2px 6px;
@@ -99,14 +111,14 @@
 
         .track-list li:hover {
             color: #ffffff;
-            background-color: rgba(255, 221, 0, 0.2);
+            background-color: rgba(0, 255, 65, 0.2);
             padding-left: 10px;
         }
 
         .track-list li.playing {
             color: #ffffff;
-            background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
-            box-shadow: 0 0 12px rgba(255, 200, 0, 0.6), 0 0 25px rgba(255, 150, 0, 0.3);
+            background: linear-gradient(90deg, rgba(0, 255, 65, 0.3), rgba(0, 200, 50, 0.1));
+            box-shadow: 0 0 12px rgba(0, 255, 65, 0.6), 0 0 25px rgba(0, 200, 50, 0.3);
             animation: glow 1.2s ease-in-out infinite alternate;
             padding-left: 10px;
             font-weight: bold;
@@ -114,10 +126,10 @@
 
         @keyframes glow {
             from {
-                box-shadow: 0 0 8px rgba(255, 200, 0, 0.5), 0 0 15px rgba(255, 150, 0, 0.2);
+                box-shadow: 0 0 8px rgba(0, 255, 65, 0.5), 0 0 15px rgba(0, 200, 50, 0.2);
             }
             to {
-                box-shadow: 0 0 15px rgba(255, 200, 0, 0.9), 0 0 30px rgba(255, 150, 0, 0.5);
+                box-shadow: 0 0 15px rgba(0, 255, 65, 0.9), 0 0 30px rgba(0, 200, 50, 0.5);
             }
         }
 
@@ -227,7 +239,6 @@
             display: none;
         }
 
-        /* ✅ SOCIAL SECTION — ORIHINAL NA ICON + PANGALAN */
         .social-platforms {
             width: 100%;
             margin-top: 8px;
@@ -295,7 +306,6 @@
             justify-content: center;
         }
 
-        /* ✅ FACEBOOK — Orihinal na kulay at istilo */
         .social-btn.facebook {
             background: #1877F2;
         }
@@ -304,7 +314,6 @@
             transform: scale(1.05);
         }
 
-        /* ✅ YOUTUBE — Orihinal na kulay at istilo */
         .social-btn.youtube {
             background: #FF0000;
         }
@@ -313,7 +322,6 @@
             transform: scale(1.05);
         }
 
-        /* ✅ TIKTOK — Orihinal na kulay at istilo */
         .social-btn.tiktok {
             background: #000000;
             border: 1px solid #25F4EE;
@@ -434,6 +442,9 @@
 
     <div class="main-wrapper">
         <div class="track-list">
+            <!-- ✅ SONG LIST COVER TITLE -->
+            <div class="song-list-title">SONG LIST COVER</div>
+
             <ul id="songList">
                 <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
                 <li data-file="Andamanaya.mp3" onclick="playSong(this)">🎵 Andamanaya</li>
@@ -443,7 +454,6 @@
                 <li data-file="How do I live without you.mp3" onclick="playSong(this)">🎵 How Do I Live Without You</li>
                 <li data-file="How do you heal a broken heart.mp3" onclick="playSong(this)">🎵 How Do You Heal A Broken Heart</li>
                 <li data-file="I love you goodbye.mp3" onclick="playSong(this)">🎵 I Love You Goodbye</li>
-                <!-- ✅ MGA BAGONG KANTA NA IDINAGDAG -->
                 <li data-file="I need someone like you.mp3" onclick="playSong(this)">🎵 I Need Someone Like You</li>
                 <li data-file="kakalimutan na kita.mp3" onclick="playSong(this)">🎵 Kakalimutan Na Kita</li>
                 <li data-file="love is gone.mp3" onclick="playSong(this)">🎵 Love Is Gone</li>
@@ -473,7 +483,6 @@
                 <audio id="player">
             </div>
 
-            <!-- ✅ SOCIAL SECTION — ORIHINAL NA ICON + PANGALAN -->
             <div class="social-platforms">
                 <div class="text-line">✨ Don't Forget to Subscribe & Click Here! ✨</div>
                 <div class="arrows-line">
@@ -526,7 +535,6 @@
         let currentPlaying = null;
         let currentIndex = -1;
 
-        // ✅ BUONG LISTAHAN NG MGA KANTA (Luma + Bago)
         const songFiles = [
             'Alone.mp3',
             'Andamanaya.mp3',
