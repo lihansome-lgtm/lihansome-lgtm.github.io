@@ -32,7 +32,7 @@
                 0 0 90px #00ff41,
                 0 0 120px #00dd38;
             animation: neon-pink-green-glow 1.2s ease-in-out infinite alternate;
-            margin-bottom: 0;
+            margin-bottom: 10px;
             font-family: Arial, sans-serif;
         }
 
@@ -53,6 +53,78 @@
                     0 0 80px #00ff41,
                     0 0 110px #00ff41,
                     0 0 150px #00dd38;
+            }
+        }
+
+        .boss-niddo {
+            text-align: center;
+            font-size: 72px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            color: #00ff41;
+            text-shadow:
+                3px 3px 0 #005511,
+                6px 6px 0 #003308,
+                0 0 8px #00ff41,
+                0 0 15px #00ff41,
+                0 0 30px #00ff41,
+                0 0 60px #00dd38;
+            animation: neon-green-glow 1.2s ease-in-out infinite alternate;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        .music-production {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #d4ff00;
+            text-shadow:
+                0 0 8px #d4ff00,
+                0 0 15px #d4ff00,
+                0 0 30px #aaff00,
+                0 0 60px #88ff00;
+            animation: neon-yellow-green-glow 1.2s ease-in-out infinite alternate;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes neon-green-glow {
+            from {
+                text-shadow:
+                    3px 3px 0 #005511,
+                    6px 6px 0 #003308,
+                    0 0 8px #00ff41,
+                    0 0 15px #00ff41,
+                    0 0 30px #00ff41;
+            }
+            to {
+                text-shadow:
+                    3px 3px 0 #005511,
+                    6px 6px 0 #003308,
+                    0 0 12px #00ff41,
+                    0 0 25px #00ff41,
+                    0 0 45px #00ff41,
+                    0 0 80px #00dd38;
+            }
+        }
+
+        @keyframes neon-yellow-green-glow {
+            from {
+                text-shadow:
+                    0 0 8px #d4ff00,
+                    0 0 15px #d4ff00,
+                    0 0 30px #aaff00;
+            }
+            to {
+                text-shadow:
+                    0 0 12px #d4ff00,
+                    0 0 25px #d4ff00,
+                    0 0 45px #aaff00,
+                    0 0 80px #88ff00;
             }
         }
 
@@ -82,7 +154,6 @@
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
 
-        /* ✅ SONG LIST COVER — BLUE */
         .song-list-title {
             text-align: center;
             font-size: 16px;
@@ -236,7 +307,33 @@
         }
 
         .volume-wrap {
-            display: none;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .volume-icon {
+            font-size: 12px;
+            color: #ffffff;
+        }
+        .volume-slider {
+            width: 100px;
+            height: 4px;
+            -webkit-appearance: none;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            background: #00ff41;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 6px #00ff41;
         }
 
         .social-platforms {
@@ -424,6 +521,14 @@
                 font-size: 48px;
                 letter-spacing: 6px;
             }
+            .boss-niddo {
+                font-size: 42px;
+                letter-spacing: 5px;
+            }
+            .music-production {
+                font-size: 18px;
+                letter-spacing: 3px;
+            }
             .main-wrapper { flex-direction: column; }
             .track-list { width: 280px; }
             .comment-section {
@@ -439,10 +544,11 @@
 <body>
 
     <div class="neon-welcome">WELCOME</div>
+    <h1 class="boss-niddo">BOSS NIDDO</h1>
+    <h2 class="music-production">MUSIC PRODUCTION</h2>
 
     <div class="main-wrapper">
         <div class="track-list">
-            <!-- ✅ SONG LIST COVER TITLE -->
             <div class="song-list-title">SONG LIST COVER</div>
 
             <ul id="songList">
@@ -479,6 +585,10 @@
                         <span id="currTime">00:00</span>
                         <span id="durTime">00:00</span>
                     </div>
+                </div>
+                <div class="volume-wrap">
+                    <span class="volume-icon">🔊</span>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70" oninput="setVolume(this.value)">
                 </div>
                 <audio id="player">
             </div>
@@ -578,6 +688,10 @@
         const durTimeEl = document.getElementById('durTime');
         const visualizer = document.getElementById('visualizer');
         player.volume = 0.7;
+
+        function setVolume(value) {
+            player.volume = value / 100;
+        }
 
         for(let i=0; i<15; i++) {
             const bar = document.createElement('div');
