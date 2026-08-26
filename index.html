@@ -75,8 +75,71 @@
                 0 0 60px #00dd38;
             animation: neon-green-glow 1.2s ease-in-out infinite alternate;
             margin-top: 0;
+            margin-bottom: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ✅ HitForgeStudio — Neon Sign Blue Light Style */
+        .hit-forge {
+            text-align: center;
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            color: #00ccff;
+            text-shadow:
+                0 0 5px #00ccff,
+                0 0 10px #00ccff,
+                0 0 20px #00ccff,
+                0 0 40px #0088ff,
+                0 0 70px #0066ff,
+                0 0 100px #0044ff;
+            animation: neon-blue-sign 1.5s ease-in-out infinite alternate;
+            margin-top: 0;
             margin-bottom: 5px;
             font-family: Arial, sans-serif;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* ✅ Neon Sign Stand — parang nakatayong ilaw */
+        .hit-forge::before,
+        .hit-forge::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #00ccff, transparent);
+            box-shadow: 0 0 10px #00ccff;
+        }
+        .hit-forge::before {
+            left: calc(50% - 100px);
+        }
+        .hit-forge::after {
+            right: calc(50% - 100px);
+        }
+
+        @keyframes neon-blue-sign {
+            from {
+                color: #00ccff;
+                text-shadow:
+                    0 0 5px #00ccff,
+                    0 0 10px #00ccff,
+                    0 0 20px #00ccff,
+                    0 0 40px #0088ff,
+                    0 0 60px #0066ff;
+            }
+            to {
+                color: #66eeff;
+                text-shadow:
+                    0 0 10px #66eeff,
+                    0 0 20px #66eeff,
+                    0 0 40px #00ccff,
+                    0 0 70px #0088ff,
+                    0 0 100px #0066ff,
+                    0 0 140px #0044ff;
+            }
         }
 
         .music-production {
@@ -91,7 +154,7 @@
                 0 0 30px #aaff00,
                 0 0 60px #88ff00;
             animation: neon-yellow-green-glow 1.2s ease-in-out infinite alternate;
-            margin-top: 0;
+            margin-top: 20px;
             margin-bottom: 15px;
             font-family: Arial, sans-serif;
         }
@@ -530,6 +593,10 @@
                 font-size: 42px;
                 letter-spacing: 5px;
             }
+            .hit-forge {
+                font-size: 24px;
+                letter-spacing: 4px;
+            }
             .music-production {
                 font-size: 16px;
                 letter-spacing: 3px;
@@ -550,6 +617,9 @@
 
     <div class="neon-welcome">WELCOME</div>
     <h1 class="boss-niddo">BOSS NIDDO</h1>
+    <div style="text-align:center;">
+        <div class="hit-forge">HitForgeStudio</div>
+    </div>
     <h2 class="music-production">MUSIC PRODUCTION</h2>
 
     <div class="main-wrapper">
