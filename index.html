@@ -18,42 +18,42 @@
             padding-right: 20px;
         }
 
-        /* ✨ WELCOME — PULA NA may BLUE NEON SHADOW ✨ */
+        /* ✨ WELCOME — PINK TEXT + GREEN NEON GLOW ✨ */
         .neon-welcome {
             text-align: center;
             font-size: 72px;
             font-weight: 900;
             letter-spacing: 10px;
-            color: #ff0000;
+            color: #ff2eeb;
             text-shadow:
-                0 0 8px #ff0000,
-                0 0 15px #ff0000,
-                0 0 30px #ff0000,
-                0 0 60px #00bfff,
-                0 0 90px #00bfff,
-                0 0 120px #0080ff;
-            animation: neon-red-blue-glow 1.2s ease-in-out infinite alternate;
+                0 0 8px #ff2eeb,
+                0 0 15px #ff2eeb,
+                0 0 30px #ff2eeb,
+                0 0 60px #00ff41,
+                0 0 90px #00ff41,
+                0 0 120px #00dd38;
+            animation: neon-pink-green-glow 1.2s ease-in-out infinite alternate;
             margin-bottom: 30px;
             font-family: Arial, sans-serif;
         }
 
-        @keyframes neon-red-blue-glow {
+        @keyframes neon-pink-green-glow {
             from {
                 text-shadow:
-                    0 0 8px #ff0000,
-                    0 0 15px #ff0000,
-                    0 0 30px #ff0000,
-                    0 0 50px #00bfff,
-                    0 0 80px #00bfff;
+                    0 0 8px #ff2eeb,
+                    0 0 15px #ff2eeb,
+                    0 0 30px #ff2eeb,
+                    0 0 50px #00ff41,
+                    0 0 80px #00ff41;
             }
             to {
                 text-shadow:
-                    0 0 12px #ff0000,
-                    0 0 25px #ff0000,
-                    0 0 45px #ff0000,
-                    0 0 80px #00bfff,
-                    0 0 110px #00bfff,
-                    0 0 150px #0080ff;
+                    0 0 12px #ff4ffc,
+                    0 0 25px #ff4ffc,
+                    0 0 45px #ff4ffc,
+                    0 0 80px #00ff41,
+                    0 0 110px #00ff41,
+                    0 0 150px #00dd38;
             }
         }
 
@@ -72,16 +72,16 @@
             flex-wrap: wrap;
         }
 
-        /* ✅ SONG LIST BOX — NASA GILID KALIWA ✅ */
+        /* ✅ SONG LIST BOX — PINALIIT PERO NASA GILID PA RIN ✅ */
         .track-list {
             margin-top: 10px;
             text-align: left;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(30,10,50,0.6));
-            padding: 18px 20px;
+            padding: 12px 15px;
             border-radius: 12px;
-            font-size: 14px;
-            line-height: 1.6;
-            width: 380px;
+            font-size: 13px;
+            line-height: 1.5;
+            width: 280px; /* ← PINALIIT MULA 380 → 280px */
             box-shadow: 0 0 18px rgba(150, 50, 255, 0.3);
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
@@ -89,7 +89,7 @@
         .track-list ul {
             list-style: none;
             padding-left: 0;
-            margin: 0 0 18px 0;
+            margin: 0 0 12px 0;
         }
 
         .track-list li {
@@ -97,14 +97,14 @@
             text-shadow: 1px 1px 3px #000000;
             cursor: pointer;
             transition: all 0.4s ease;
-            padding: 3px 8px;
+            padding: 3px 6px;
             border-radius: 5px;
         }
 
         .track-list li:hover {
             color: #ffffff;
             background-color: rgba(255, 221, 0, 0.2);
-            padding-left: 12px;
+            padding-left: 10px;
         }
 
         .track-list li.playing {
@@ -112,7 +112,7 @@
             background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
             box-shadow: 0 0 12px rgba(255, 200, 0, 0.6), 0 0 25px rgba(255, 150, 0, 0.3);
             animation: glow 1.2s ease-in-out infinite alternate;
-            padding-left: 12px;
+            padding-left: 10px;
             font-weight: bold;
         }
 
@@ -127,39 +127,39 @@
 
         .social-note {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 8px;
             margin-bottom: 6px;
         }
 
         .social-note .text-line {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #ffdd00;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(255, 221, 0, 0.5);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .arrows-line {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 10px;
+            gap: 10px;
+            margin-bottom: 8px;
         }
 
         .arrow-fb {
-            font-size: 32px;
+            font-size: 26px;
             color: #1877f2;
             text-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
         }
 
         .arrow-yt {
-            font-size: 32px;
+            font-size: 26px;
             color: #ff0000;
             text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
         }
 
         .arrow-tt {
-            font-size: 32px;
+            font-size: 26px;
             color: #ffffff;
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
         }
@@ -167,27 +167,28 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin: 0 0 12px 0;
+            gap: 6px;
+            margin: 0 0 10px 0;
+            flex-wrap: wrap;
         }
 
         .social-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 13px 18px;
+            gap: 6px;
+            padding: 9px 12px;
             border-radius: 25px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
 
         .social-btn .icon {
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: 18px;
         }
 
         .social-btn.facebook {
@@ -218,8 +219,8 @@
         }
 
         .player-container {
-            margin-top: 18px;
-            padding: 15px;
+            margin-top: 12px;
+            padding: 10px;
             background: rgba(0, 0, 0, 0.4);
             border-radius: 10px;
             text-align: center;
@@ -227,8 +228,8 @@
 
         .now-playing {
             color: #ffdd00;
-            font-size: 12px;
-            margin-bottom: 10px;
+            font-size: 11px;
+            margin-bottom: 8px;
             font-style: italic;
         }
 
@@ -236,8 +237,8 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            height: 18px;
-            margin-bottom: 10px;
+            height: 16px;
+            margin-bottom: 8px;
             gap: 2px;
         }
         .bar {
@@ -248,25 +249,25 @@
         }
         @keyframes bounce {
             from { height: 4px; }
-            to { height: 16px; }
+            to { height: 14px; }
         }
 
         .controls {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 18px;
-            margin-bottom: 10px;
+            gap: 12px;
+            margin-bottom: 8px;
         }
 
         .btn {
             background: transparent;
             border: 2px solid #ffffff;
             color: #ffffff;
-            width: 38px;
-            height: 38px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            font-size: 14px;
+            font-size: 12px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -277,14 +278,14 @@
             background: rgba(255,255,255,0.2);
         }
         .btn.main {
-            width: 48px;
-            height: 48px;
-            font-size: 18px;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
         }
 
         .progress-wrap {
             width: 100%;
-            margin-top: 8px;
+            margin-top: 6px;
         }
         .progress-bar {
             width: 100%;
@@ -305,8 +306,8 @@
             position: absolute;
             right: -5px;
             top: -3px;
-            width: 9px;
-            height: 9px;
+            width: 8px;
+            height: 8px;
             background: #ffffff;
             border-radius: 50%;
         }
@@ -314,25 +315,25 @@
         .time-display {
             display: flex;
             justify-content: space-between;
-            font-size: 11px;
+            font-size: 10px;
             color: #ffffff;
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .volume-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            margin-top: 10px;
+            gap: 6px;
+            margin-top: 8px;
             cursor: pointer;
         }
         .volume-icon {
             color: #ffffff;
-            font-size: 16px;
+            font-size: 14px;
         }
         .volume-slider {
-            width: 120px;
+            width: 90px;
             height: 2px;
             background: rgba(255,255,255,0.3);
             border-radius: 2px;
@@ -350,8 +351,8 @@
             position: absolute;
             right: -5px;
             top: -3px;
-            width: 9px;
-            height: 9px;
+            width: 8px;
+            height: 8px;
             background: #ffffff;
             border-radius: 50%;
         }
@@ -450,14 +451,14 @@
                 letter-spacing: 6px;
             }
             .main-wrapper { flex-direction: column; }
-            .track-list { width: 380px; }
+            .track-list { width: 280px; }
             .social-links { flex-direction: column; align-items: center; }
-            .arrows-line { gap: 100px; }
+            .arrows-line { gap: 80px; }
             .comment-section {
                 position: relative;
                 bottom: auto;
                 right: auto;
-                width: 380px;
+                width: 280px;
                 margin-top: 20px;
             }
         }
@@ -465,13 +466,13 @@
 </head>
 <body>
 
-    <!-- ✨ WELCOME — PULA with BLUE NEON GLOW ✨ -->
+    <!-- ✨ WELCOME — PINK + GREEN NEON ✨ -->
     <div class="neon-welcome">WELCOME</div>
 
     <h2>📋 Broken Track List &nbsp; 🎶 Cover Hugot 💔</h2>
     <div class="main-wrapper">
 
-        <!-- ✅ SONG LIST BOX — NASA KALIWA ✅ -->
+        <!-- ✅ SONG LIST BOX — PINALIIT, NASA GILID ✅ -->
         <div class="track-list">
             <ul id="songList">
                 <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
@@ -515,16 +516,10 @@
                 <div class="text-line">✨ Don't Forget to Subscribe & Click Here! ✨</div>
                 <div class="arrows-line">
                     </div>
-                 </div>
-             </div>
+                </div>
+            </div>
                     <span class="arrow-fb">⬇</span>
-                    </div>
-                 </div>
-             </div>
                     <span class="arrow-yt">⬇</span>
-                    </div>
-                 </div>
-             </div>
                     <span class="arrow-tt">⬇</span>
                 </div>
             </div>
