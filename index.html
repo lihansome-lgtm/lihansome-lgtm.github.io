@@ -11,20 +11,62 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #ffffff;
-            padding-top: 40px;
+            padding-top: 30px;
             font-family: Arial, sans-serif;
             margin: 0;
             padding-left: 20px;
             padding-right: 20px;
         }
+
+        /* ✨ NEON WELCOME SIGN ✨ */
+        .neon-welcome {
+            text-align: center;
+            font-size: 52px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            color: #ffffff;
+            text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #ffdd00,
+                0 0 40px #ffdd00,
+                0 0 80px #ffaa00,
+                0 0 120px #ffaa00;
+            animation: neon-glow 1.5s ease-in-out infinite alternate;
+            margin-bottom: 25px;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes neon-glow {
+            from {
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #ffdd00,
+                    0 0 40px #ffdd00,
+                    0 0 60px #ffaa00;
+            }
+            to {
+                text-shadow:
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 40px #ffdd00,
+                    0 0 70px #ffdd00,
+                    0 0 100px #ffaa00,
+                    0 0 150px #ffaa00;
+            }
+        }
+
         h2 {
             font-size: 22px;
             margin-top: 10px;
             margin-bottom: 12px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            text-align: center;
         }
         .main-wrapper {
             display: flex;
+            justify-content: center;
             gap: 25px;
             align-items: flex-start;
             flex-wrap: wrap;
@@ -375,6 +417,9 @@
             display: none;
         }
         @media (max-width: 800px) {
+            .neon-welcome {
+                font-size: 36px;
+            }
             .main-wrapper {
                 flex-direction: column;
             }
@@ -399,6 +444,10 @@
     </style>
 </head>
 <body>
+
+    <!-- ✨ NEON WELCOME SA PINAKATAAS ✨ -->
+    <div class="neon-welcome">WELCOME</div>
+
     <h2>📋 Broken Track List &nbsp; 🎶 Cover Hugot 💔</h2>
     <div class="main-wrapper">
         <div class="track-list">
