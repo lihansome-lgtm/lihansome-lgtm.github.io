@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track List</title>
+    <title>Broken Track List</title>
     <style>
         body {
             background-image: url("Boss Niddo1.jpg");
@@ -72,16 +72,16 @@
             flex-wrap: wrap;
         }
 
-        /* ✅ SONG LIST BOX — PINALIIT PERO NASA GILID PA RIN ✅ */
+        /* ✅ SONG LIST BOX — PINATAAS NG KONTI ✅ */
         .track-list {
             margin-top: 10px;
             text-align: left;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(30,10,50,0.6));
-            padding: 12px 15px;
+            padding: 15px 18px;  /* ← PINATAAS NG KONTI */
             border-radius: 12px;
-            font-size: 13px;
-            line-height: 1.5;
-            width: 280px; /* ← PINALIIT MULA 380 → 280px */
+            font-size: 14px;       /* ← PINALAKI NG KONTI ANG SULAT */
+            line-height: 1.6;      /* ← PINALUWAG NG KONTI ANG PAGKAKAPALIT */
+            width: 300px;          /* ← PINALUWAG NG KONTI ANG LAPAD */
             box-shadow: 0 0 18px rgba(150, 50, 255, 0.3);
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
@@ -89,7 +89,7 @@
         .track-list ul {
             list-style: none;
             padding-left: 0;
-            margin: 0 0 12px 0;
+            margin: 0 0 15px 0;
         }
 
         .track-list li {
@@ -97,14 +97,14 @@
             text-shadow: 1px 1px 3px #000000;
             cursor: pointer;
             transition: all 0.4s ease;
-            padding: 3px 6px;
+            padding: 4px 7px;
             border-radius: 5px;
         }
 
         .track-list li:hover {
             color: #ffffff;
             background-color: rgba(255, 221, 0, 0.2);
-            padding-left: 10px;
+            padding-left: 11px;
         }
 
         .track-list li.playing {
@@ -112,7 +112,7 @@
             background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
             box-shadow: 0 0 12px rgba(255, 200, 0, 0.6), 0 0 25px rgba(255, 150, 0, 0.3);
             animation: glow 1.2s ease-in-out infinite alternate;
-            padding-left: 10px;
+            padding-left: 11px;
             font-weight: bold;
         }
 
@@ -127,7 +127,7 @@
 
         .social-note {
             text-align: center;
-            margin-top: 8px;
+            margin-top: 10px;
             margin-bottom: 6px;
         }
 
@@ -167,8 +167,8 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 6px;
-            margin: 0 0 10px 0;
+            gap: 8px;
+            margin: 0 0 12px 0;
             flex-wrap: wrap;
         }
 
@@ -176,7 +176,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 9px 12px;
+            padding: 10px 14px;
             border-radius: 25px;
             color: #ffffff;
             text-decoration: none;
@@ -187,8 +187,8 @@
         }
 
         .social-btn .icon {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
         }
 
         .social-btn.facebook {
@@ -219,8 +219,8 @@
         }
 
         .player-container {
-            margin-top: 12px;
-            padding: 10px;
+            margin-top: 14px;
+            padding: 12px;
             background: rgba(0, 0, 0, 0.4);
             border-radius: 10px;
             text-align: center;
@@ -228,7 +228,7 @@
 
         .now-playing {
             color: #ffdd00;
-            font-size: 11px;
+            font-size: 12px;
             margin-bottom: 8px;
             font-style: italic;
         }
@@ -256,7 +256,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             margin-bottom: 8px;
         }
 
@@ -264,10 +264,10 @@
             background: transparent;
             border: 2px solid #ffffff;
             color: #ffffff;
-            width: 32px;
-            height: 32px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
-            font-size: 12px;
+            font-size: 13px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -278,9 +278,9 @@
             background: rgba(255,255,255,0.2);
         }
         .btn.main {
-            width: 40px;
-            height: 40px;
-            font-size: 16px;
+            width: 42px;
+            height: 42px;
+            font-size: 17px;
         }
 
         .progress-wrap {
@@ -333,7 +333,7 @@
             font-size: 14px;
         }
         .volume-slider {
-            width: 90px;
+            width: 100px;
             height: 2px;
             background: rgba(255,255,255,0.3);
             border-radius: 2px;
@@ -399,7 +399,7 @@
             color: #cccccc;
         }
         .comment-input-area button {
-            padding: 7px 10px;
+            padding:  7px 10px;
             background: linear-gradient(90deg, #ffdd00, #ffaa00);
             color: #000000;
             border: none;
@@ -451,14 +451,14 @@
                 letter-spacing: 6px;
             }
             .main-wrapper { flex-direction: column; }
-            .track-list { width: 280px; }
+            .track-list { width: 300px; }
             .social-links { flex-direction: column; align-items: center; }
             .arrows-line { gap: 80px; }
             .comment-section {
                 position: relative;
                 bottom: auto;
                 right: auto;
-                width: 280px;
+                width: 300px;
                 margin-top: 20px;
             }
         }
@@ -472,7 +472,7 @@
     <h2>📋 Broken Track List &nbsp; 🎶 Cover Hugot 💔</h2>
     <div class="main-wrapper">
 
-        <!-- ✅ SONG LIST BOX — PINALIIT, NASA GILID ✅ -->
+        <!-- ✅ SONG LIST BOX — PINATAAS NG KONTI ✅ -->
         <div class="track-list">
             <ul id="songList">
                 <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
