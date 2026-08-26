@@ -75,11 +75,44 @@
                 box-shadow: 0 0 15px rgba(255, 200, 0, 0.9), 0 0 30px rgba(255, 150, 0, 0.5);
             }
         }
+        .social-note {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 6px;
+        }
+        .social-note .text-line {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffdd00;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(255, 221, 0, 0.5);
+            margin-bottom: 8px;
+        }
+        .arrows-line {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .arrow-fb {
+            font-size: 32px;
+            color: #1877f2;
+            text-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
+        }
+        .arrow-yt {
+            font-size: 32px;
+            color: #ff0000;
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+        }
+        .arrow-tt {
+            font-size: 32px;
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
         .social-links {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin: 18px 0 12px 0;
+            margin: 0 0 12px 0;
         }
         .social-btn {
             display: inline-flex;
@@ -121,26 +154,6 @@
         .social-btn.tiktok:hover {
             background: #ffffff;
             color: #000000;
-        }
-        .social-note {
-            text-align: center;
-            margin-top: 8px;
-            margin-bottom: 10px;
-        }
-        .social-note .text-line {
-            font-size: 14px;
-            font-weight: bold;
-            color: #ffdd00;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 8px rgba(255, 221, 0, 0.4);
-            margin-bottom: 4px;
-        }
-        .arrows-line {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            font-size: 20px;
-            color: #ffdd00;
-            text-shadow: 0 0 6px rgba(255, 221, 0, 0.6);
         }
         .player-container {
             margin-top: 18px;
@@ -372,12 +385,8 @@
                 flex-direction: column;
                 align-items: center;
             }
-            .social-btn {
-                width: 100%;
-                justify-content: center;
-            }
             .arrows-line {
-                gap: 110px;
+                gap: 100px;
             }
             .comment-section {
                 position: relative;
@@ -428,6 +437,16 @@
                 </div>
                 <audio id="player">
             </div>
+            <!-- TEXT + PALASO — NASA TAAS NG MGA BUTON -->
+            <div class="social-note">
+                <div class="text-line">✨ Don't Forget to Subscribe & Click Here! ✨</div>
+                <div class="arrows-line">
+                    <span class="arrow-fb">⬇</span>
+                    <span class="arrow-yt">⬇</span>
+                    <span class="arrow-tt">⬇</span>
+                </div>
+            </div>
+            <!-- MGA BUTON — NASA ILALIM NG PALASO -->
             <div class="social-links">
                 <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">
                     <span class="icon">
@@ -453,10 +472,6 @@
                     </span>
                     TikTok
                 </a>
-            </div>
-            <div class="social-note">
-                <div class="text-line">✨ Don't Forget to Subscribe & Click Here! ✨</div>
-                <div class="arrows-line">⬇ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⬇ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⬇</div>
             </div>
         </div>
     </div>
