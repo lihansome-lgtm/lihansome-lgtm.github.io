@@ -18,6 +18,7 @@
             padding-right: 20px;
         }
 
+        /* ✅ WELCOME — 3D Style */
         .neon-welcome {
             text-align: center;
             font-size: 72px;
@@ -25,12 +26,13 @@
             letter-spacing: 10px;
             color: #ff2eeb;
             text-shadow:
+                3px 3px 0 #880077,
+                6px 6px 0 #550044,
                 0 0 8px #ff2eeb,
                 0 0 15px #ff2eeb,
                 0 0 30px #ff2eeb,
                 0 0 60px #00ff41,
-                0 0 90px #00ff41,
-                0 0 120px #00dd38;
+                0 0 90px #00ff41;
             animation: neon-pink-green-glow 1.2s ease-in-out infinite alternate;
             margin-bottom: 10px;
             font-family: Arial, sans-serif;
@@ -39,20 +41,22 @@
         @keyframes neon-pink-green-glow {
             from {
                 text-shadow:
+                    3px 3px 0 #880077,
+                    6px 6px 0 #550044,
                     0 0 8px #ff2eeb,
                     0 0 15px #ff2eeb,
                     0 0 30px #ff2eeb,
-                    0 0 50px #00ff41,
-                    0 0 80px #00ff41;
+                    0 0 50px #00ff41;
             }
             to {
                 text-shadow:
+                    3px 3px 0 #880077,
+                    6px 6px 0 #550044,
                     0 0 12px #ff4ffc,
                     0 0 25px #ff4ffc,
                     0 0 45px #ff4ffc,
                     0 0 80px #00ff41,
-                    0 0 110px #00ff41,
-                    0 0 150px #00dd38;
+                    0 0 110px #00ff41;
             }
         }
 
@@ -141,34 +145,35 @@
             margin-top: -10px;
         }
 
+        /* ✅ PINALIIT NA SONG LIST BOX */
         .track-list {
             margin-top: 0;
             text-align: left;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(30,10,50,0.6));
-            padding: 12px 15px;
-            border-radius: 12px;
-            font-size: 13px;
-            line-height: 1.4;
-            width: 280px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.3;
+            width: 230px;
             box-shadow: 0 0 18px rgba(150, 50, 255, 0.3);
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
 
         .song-list-title {
             text-align: center;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             color: #00aaff;
             text-shadow: 0 0 8px rgba(0, 170, 255, 0.8), 0 0 16px rgba(0, 170, 255, 0.5);
-            margin-bottom: 10px;
-            padding-bottom: 8px;
+            margin-bottom: 6px;
+            padding-bottom: 5px;
             border-bottom: 1px solid rgba(0, 170, 255, 0.3);
         }
 
         .track-list ul {
             list-style: none;
             padding-left: 0;
-            margin: 0 0 8px 0;
+            margin: 0 0 6px 0;
         }
 
         .track-list li {
@@ -176,14 +181,14 @@
             text-shadow: 1px 1px 3px #000000, 0 0 8px rgba(0, 255, 65, 0.6);
             cursor: pointer;
             transition: all 0.4s ease;
-            padding: 2px 6px;
-            border-radius: 5px;
+            padding: 2px 4px;
+            border-radius: 4px;
         }
 
         .track-list li:hover {
             color: #ffffff;
             background-color: rgba(0, 255, 65, 0.2);
-            padding-left: 10px;
+            padding-left: 8px;
         }
 
         .track-list li.playing {
@@ -191,7 +196,7 @@
             background: linear-gradient(90deg, rgba(0, 255, 65, 0.3), rgba(0, 200, 50, 0.1));
             box-shadow: 0 0 12px rgba(0, 255, 65, 0.6), 0 0 25px rgba(0, 200, 50, 0.3);
             animation: glow 1.2s ease-in-out infinite alternate;
-            padding-left: 10px;
+            padding-left: 8px;
             font-weight: bold;
         }
 
@@ -205,17 +210,17 @@
         }
 
         .player-container {
-            margin-top: 8px;
-            padding: 8px;
+            margin-top: 6px;
+            padding: 6px;
             background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
         }
 
         .now-playing {
             color: #ffdd00;
-            font-size: 11px;
-            margin-bottom: 5px;
+            font-size: 10px;
+            margin-bottom: 4px;
             font-style: italic;
         }
 
@@ -223,8 +228,8 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            height: 10px;
-            margin-bottom: 5px;
+            height: 8px;
+            margin-bottom: 4px;
             gap: 2px;
         }
         .bar {
@@ -235,25 +240,25 @@
         }
         @keyframes bounce {
             from { height: 3px; }
-            to { height: 10px; }
+            to { height: 8px; }
         }
 
         .controls {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 5px;
+            gap: 6px;
+            margin-bottom: 4px;
         }
 
         .btn {
             background: transparent;
             border: 2px solid #ffffff;
             color: #ffffff;
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            font-size: 11px;
+            font-size: 10px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -264,14 +269,14 @@
             background: rgba(255,255,255,0.2);
         }
         .btn.main {
-            width: 34px;
-            height: 34px;
-            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
         }
 
         .progress-wrap {
             width: 100%;
-            margin-top: 4px;
+            margin-top: 3px;
         }
         .progress-bar {
             width: 100%;
@@ -290,10 +295,10 @@
         .progress-fill::after {
             content: '';
             position: absolute;
-            right: -4px;
-            top: -2px;
-            width: 8px;
-            height: 8px;
+            right: -3px;
+            top: -1px;
+            width: 6px;
+            height: 6px;
             background: #ffffff;
             border-radius: 50%;
         }
@@ -301,25 +306,25 @@
         .time-display {
             display: flex;
             justify-content: space-between;
-            font-size: 9px;
+            font-size: 8px;
             color: #ffffff;
             margin-top: 2px;
         }
 
         .volume-wrap {
-            margin-top: 6px;
+            margin-top: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 4px;
         }
         .volume-icon {
-            font-size: 12px;
+            font-size: 10px;
             color: #ffffff;
         }
         .volume-slider {
-            width: 100px;
-            height: 4px;
+            width: 80px;
+            height: 3px;
             -webkit-appearance: none;
             background: rgba(255,255,255,0.3);
             border-radius: 2px;
@@ -328,76 +333,76 @@
         }
         .volume-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             background: #00ff41;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 0 6px #00ff41;
+            box-shadow: 0 0 5px #00ff41;
         }
 
         .social-platforms {
             width: 100%;
-            margin-top: 8px;
-            padding: 8px 10px;
+            margin-top: 6px;
+            padding: 6px 8px;
             background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
             box-sizing: border-box;
         }
 
         .social-platforms .text-line {
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             color: #ffdd00;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .arrows-line {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 6px;
+            gap: 12px;
+            margin-bottom: 4px;
         }
 
         .arrow-fb {
-            font-size: 16px;
+            font-size: 14px;
             color: #1877f2;
         }
 
         .arrow-yt {
-            font-size: 16px;
+            font-size: 14px;
             color: #ff0000;
         }
 
         .arrow-tt {
-            font-size: 16px;
+            font-size: 14px;
             color: #ffffff;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
         }
 
         .social-btn {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            padding: 6px 10px;
-            border-radius: 20px;
+            gap: 4px;
+            padding: 4px 8px;
+            border-radius: 15px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             transition: all 0.3s ease;
         }
 
         .social-btn .icon {
-            width: 15px;
-            height: 15px;
+            width: 13px;
+            height: 13px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -433,36 +438,36 @@
             bottom: 20px;
             right: 20px;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,60,0.6));
-            padding: 12px 15px;
-            border-radius: 12px;
-            width: 260px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            width: 230px;
             box-shadow: 0 0 18px rgba(100, 180, 255, 0.25);
             border: 1px solid rgba(150, 200, 255, 0.3);
             z-index: 9999;
         }
         .comment-section h3 {
             color: #ffdd00;
-            font-size: 14px;
+            font-size: 12px;
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-shadow: 1px 1px 3px #000;
         }
         .comment-input-area {
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            margin-bottom: 8px;
+            gap: 5px;
+            margin-bottom: 6px;
         }
         .comment-input-area input,
         .comment-input-area textarea {
             width: 100%;
             box-sizing: border-box;
-            padding: 7px;
-            border-radius: 6px;
+            padding: 5px;
+            border-radius: 5px;
             border: 1px solid rgba(255,255,255,0.2);
             background: rgba(0,0,0,0.4);
             color: #ffffff;
-            font-size: 12px;
+            font-size: 11px;
             outline: none;
         }
         .comment-input-area input::placeholder,
@@ -470,72 +475,72 @@
             color: #cccccc;
         }
         .comment-input-area button {
-            padding: 7px 10px;
+            padding: 5px 8px;
             background: linear-gradient(90deg, #ffdd00, #ffaa00);
             color: #000000;
             border: none;
-            border-radius: 6px;
-            font-size: 12px;
+            border-radius: 5px;
+            font-size: 11px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
         }
         .comment-input-area button:hover {
             transform: scale(1.03);
-            box-shadow: 0 0 10px rgba(255, 221, 0, 0.5);
+            box-shadow: 0 0 8px rgba(255, 221, 0, 0.5);
         }
         .comments-list {
-            max-height: 220px;
+            max-height: 180px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 7px;
+            gap: 5px;
         }
         .comment-item {
             background: rgba(255,255,255,0.08);
-            padding: 7px 9px;
-            border-radius: 6px;
+            padding: 5px 7px;
+            border-radius: 5px;
             border-left: 3px solid #ffdd00;
         }
         .comment-name {
             font-weight: bold;
             color: #ffdd00;
-            font-size: 11px;
+            font-size: 10px;
             margin-bottom: 2px;
         }
         .comment-text {
-            font-size: 12px;
+            font-size: 11px;
             color: #ffffff;
-            line-height: 1.3;
+            line-height: 1.2;
         }
         .comment-time {
-            font-size: 10px;
+            font-size: 9px;
             color: #aaaaaa;
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
         audio { display: none; }
 
         @media (max-width: 800px) {
             .neon-welcome {
-                font-size: 48px;
-                letter-spacing: 6px;
+                font-size: 42px;
+                letter-spacing: 5px;
             }
             .boss-niddo {
                 font-size: 42px;
                 letter-spacing: 5px;
             }
             .music-production {
-                font-size: 18px;
+                font-size: 16px;
                 letter-spacing: 3px;
             }
             .main-wrapper { flex-direction: column; }
-            .track-list { width: 280px; }
+            .track-list { width: 230px; }
             .comment-section {
                 position: relative;
                 bottom: auto;
                 right: auto;
-                width: 280px;
+                width: 230px;
                 margin-top: 20px;
             }
         }
@@ -632,7 +637,7 @@
 
     <div class="comment-section">
         <h3>💬 Comment Section</h3>
-        <p style="font-size:11px; color:#ccc; margin:0 0 8px 0;">May mensahe? Iwan mo dito!</p>
+        <p style="font-size:10px; color:#ccc; margin:0 0 6px 0;">May mensahe? Iwan mo dito!</p>
         <div class="comment-input-area">
             <input type="text" id="commenterName" placeholder="Pangalan..." maxlength="30">
             <textarea id="commentText" rows="2" placeholder="Komento..." maxlength="500"></textarea>
