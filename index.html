@@ -6,62 +6,241 @@
     <title>Broken Track List</title>
     <style>
         body {
-            background-image: url("Boss Niddo3.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #050505 0%, #111111 50%, #080808 100%);
             color: #ffffff;
-            padding-top: 40px;
+            padding-top: 10px;
             font-family: Arial, sans-serif;
             margin: 0;
             padding-left: 20px;
             padding-right: 20px;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* ✨ WELCOME — PULA NA may BLUE NEON SHADOW ✨ */
+        /* ✅ BACKGROUND: Malaking Boss Niddo Green Neon */
+        .bg-neon-boss {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 180px;
+            font-weight: 900;
+            letter-spacing: 20px;
+            color: rgba(0, 255, 65, 0.08);
+            text-shadow:
+                0 0 20px rgba(0, 255, 65, 0.3),
+                0 0 40px rgba(0, 255, 65, 0.2),
+                0 0 80px rgba(0, 255, 65, 0.15);
+            z-index: -2;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        /* ✅ Live Stage Light Effect */
+        .stage-light {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center top, rgba(0,255,65,0.05), transparent 40%),
+                        radial-gradient(circle at 20% 20%, rgba(255,46,235,0.05), transparent 40%),
+                        radial-gradient(circle at 80% 20%, rgba(0,170,255,0.05), transparent 40%);
+            z-index: -1;
+            pointer-events: none;
+            animation: stage-pulse 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes stage-pulse {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+
+        /* ✅ WELCOME — 3D Neon Style */
         .neon-welcome {
             text-align: center;
             font-size: 72px;
             font-weight: 900;
             letter-spacing: 10px;
-            color: #ff0000;
+            color: #ff2eeb;
             text-shadow:
-                0 0 8px #ff0000,
-                0 0 15px #ff0000,
-                0 0 30px #ff0000,
-                0 0 60px #00bfff,
-                0 0 90px #00bfff,
-                0 0 120px #0080ff;
-            animation: neon-red-blue-glow 1.2s ease-in-out infinite alternate;
-            margin-bottom: 30px;
+                3px 3px 0 #880077,
+                6px 6px 0 #550044,
+                0 0 8px #ff2eeb,
+                0 0 15px #ff2eeb,
+                0 0 30px #ff2eeb,
+                0 0 60px #00ff41,
+                0 0 90px #00ff41;
+            animation: neon-pink-green-glow 1.2s ease-in-out infinite alternate;
+            margin-bottom: 10px;
             font-family: Arial, sans-serif;
         }
 
-        @keyframes neon-red-blue-glow {
+        @keyframes neon-pink-green-glow {
             from {
                 text-shadow:
-                    0 0 8px #ff0000,
-                    0 0 15px #ff0000,
-                    0 0 30px #ff0000,
-                    0 0 50px #00bfff,
-                    0 0 80px #00bfff;
+                    3px 3px 0 #880077,
+                    6px 6px 0 #550044,
+                    0 0 8px #ff2eeb,
+                    0 0 15px #ff2eeb,
+                    0 0 30px #ff2eeb,
+                    0 0 50px #00ff41;
             }
             to {
                 text-shadow:
-                    0 0 12px #ff0000,
-                    0 0 25px #ff0000,
-                    0 0 45px #ff0000,
-                    0 0 80px #00bfff,
-                    0 0 110px #00bfff,
-                    0 0 150px #0080ff;
+                    3px 3px 0 #880077,
+                    6px 6px 0 #550044,
+                    0 0 12px #ff4ffc,
+                    0 0 25px #ff4ffc,
+                    0 0 45px #ff4ffc,
+                    0 0 80px #00ff41,
+                    0 0 110px #00ff41;
+            }
+        }
+
+        /* ✅ BOSS NIDDO — Green Neon Sign Style */
+        .boss-niddo {
+            text-align: center;
+            font-size: 72px;
+            font-weight: 900;
+            letter-spacing: 8px;
+            color: #00ff41;
+            text-shadow:
+                3px 3px 0 #005511,
+                6px 6px 0 #003308,
+                0 0 8px #00ff41,
+                0 0 15px #00ff41,
+                0 0 30px #00ff41,
+                0 0 60px #00dd38;
+            animation: neon-green-glow 1.2s ease-in-out infinite alternate;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes neon-green-glow {
+            from {
+                text-shadow:
+                    3px 3px 0 #005511,
+                    6px 6px 0 #003308,
+                    0 0 8px #00ff41,
+                    0 0 15px #00ff41,
+                    0 0 30px #00ff41;
+            }
+            to {
+                text-shadow:
+                    3px 3px 0 #005511,
+                    6px 6px 0 #003308,
+                    0 0 12px #00ff41,
+                    0 0 25px #00ff41,
+                    0 0 45px #00ff41,
+                    0 0 80px #00dd38;
+            }
+        }
+
+        /* ✅ HitForgeStudio — Blue Neon Sign Style */
+        .hit-forge {
+            text-align: center;
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            color: #00ccff;
+            text-shadow:
+                0 0 5px #00ccff,
+                0 0 10px #00ccff,
+                0 0 20px #00ccff,
+                0 0 40px #0088ff,
+                0 0 70px #0066ff,
+                0 0 100px #0044ff;
+            animation: neon-blue-sign 1.5s ease-in-out infinite alternate;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-family: Arial, sans-serif;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* ✅ Neon Sign Stand */
+        .hit-forge::before,
+        .hit-forge::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #00ccff, transparent);
+            box-shadow: 0 0 10px #00ccff;
+        }
+        .hit-forge::before {
+            left: calc(50% - 100px);
+        }
+        .hit-forge::after {
+            right: calc(50% - 100px);
+        }
+
+        @keyframes neon-blue-sign {
+            from {
+                color: #00ccff;
+                text-shadow:
+                    0 0 5px #00ccff,
+                    0 0 10px #00ccff,
+                    0 0 20px #00ccff,
+                    0 0 40px #0088ff,
+                    0 0 60px #0066ff;
+            }
+            to {
+                color: #66eeff;
+                text-shadow:
+                    0 0 10px #66eeff,
+                    0 0 20px #66eeff,
+                    0 0 40px #00ccff,
+                    0 0 70px #0088ff,
+                    0 0 100px #0066ff,
+                    0 0 140px #0044ff;
+            }
+        }
+
+        /* ✅ MUSIC PRODUCTION — Yellow Neon Style */
+        .music-production {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #d4ff00;
+            text-shadow:
+                0 0 8px #d4ff00,
+                0 0 15px #d4ff00,
+                0 0 30px #aaff00,
+                0 0 60px #88ff00;
+            animation: neon-yellow-green-glow 1.2s ease-in-out infinite alternate;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        @keyframes neon-yellow-green-glow {
+            from {
+                text-shadow:
+                    0 0 8px #d4ff00,
+                    0 0 15px #d4ff00,
+                    0 0 30px #aaff00;
+            }
+            to {
+                text-shadow:
+                    0 0 12px #d4ff00,
+                    0 0 25px #d4ff00,
+                    0 0 45px #aaff00,
+                    0 0 80px #88ff00;
             }
         }
 
         h2 {
-            font-size: 22px;
-            margin-top: 10px;
-            margin-bottom: 12px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            display: none;
         }
 
         .main-wrapper {
@@ -70,168 +249,86 @@
             gap: 25px;
             align-items: flex-start;
             flex-wrap: wrap;
+            margin-top: -60px;
         }
 
-        /* ✅ SONG LIST BOX — NASA GILID KALIWA ✅ */
+        /* ✅ Song List — Nasa Pinakataas na! */
         .track-list {
-            margin-top: 10px;
+            margin-top: 0;
             text-align: left;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(30,10,50,0.6));
-            padding: 18px 20px;
-            border-radius: 12px;
-            font-size: 14px;
-            line-height: 1.6;
-            width: 380px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.3;
+            width: 230px;
             box-shadow: 0 0 18px rgba(150, 50, 255, 0.3);
             border: 1px solid rgba(200, 150, 255, 0.3);
+        }
+
+        .song-list-title {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #00aaff;
+            text-shadow: 0 0 8px rgba(0, 170, 255, 0.8), 0 0 16px rgba(0, 170, 255, 0.5);
+            margin-bottom: 6px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(0, 170, 255, 0.3);
         }
 
         .track-list ul {
             list-style: none;
             padding-left: 0;
-            margin: 0 0 18px 0;
+            margin: 0 0 6px 0;
         }
 
         .track-list li {
-            color: #ffdd00;
-            text-shadow: 1px 1px 3px #000000;
+            color: #00ff41;
+            text-shadow: 1px 1px 3px #000000, 0 0 8px rgba(0, 255, 65, 0.6);
             cursor: pointer;
             transition: all 0.4s ease;
-            padding: 3px 8px;
-            border-radius: 5px;
+            padding: 2px 4px;
+            border-radius: 4px;
         }
 
         .track-list li:hover {
             color: #ffffff;
-            background-color: rgba(255, 221, 0, 0.2);
-            padding-left: 12px;
+            background-color: rgba(0, 255, 65, 0.2);
+            padding-left: 8px;
         }
 
         .track-list li.playing {
             color: #ffffff;
-            background: linear-gradient(90deg, rgba(255, 200, 0, 0.3), rgba(255, 150, 0, 0.1));
-            box-shadow: 0 0 12px rgba(255, 200, 0, 0.6), 0 0 25px rgba(255, 150, 0, 0.3);
+            background: linear-gradient(90deg, rgba(0, 255, 65, 0.3), rgba(0, 200, 50, 0.1));
+            box-shadow: 0 0 12px rgba(0, 255, 65, 0.6), 0 0 25px rgba(0, 200, 50, 0.3);
             animation: glow 1.2s ease-in-out infinite alternate;
-            padding-left: 12px;
+            padding-left: 8px;
             font-weight: bold;
+            margin-bottom: 2px;
         }
 
         @keyframes glow {
             from {
-                box-shadow: 0 0 8px rgba(255, 200, 0, 0.5), 0 0 15px rgba(255, 150, 0, 0.2);
+                box-shadow: 0 0 8px rgba(0, 255, 65, 0.5), 0 0 15px rgba(0, 200, 50, 0.2);
             }
             to {
-                box-shadow: 0 0 15px rgba(255, 200, 0, 0.9), 0 0 30px rgba(255, 150, 0, 0.5);
+                box-shadow: 0 0 15px rgba(0, 255, 65, 0.9), 0 0 30px rgba(0, 200, 50, 0.5);
             }
-        }
-
-        .social-note {
-            text-align: center;
-            margin-top: 10px;
-            margin-bottom: 6px;
-        }
-
-        .social-note .text-line {
-            font-size: 16px;
-            font-weight: bold;
-            color: #ffdd00;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(255, 221, 0, 0.5);
-            margin-bottom: 8px;
-        }
-
-        .arrows-line {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
-
-        .arrow-fb {
-            font-size: 32px;
-            color: #1877f2;
-            text-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
-        }
-
-        .arrow-yt {
-            font-size: 32px;
-            color: #ff0000;
-            text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
-        }
-
-        .arrow-tt {
-            font-size: 32px;
-            color: #ffffff;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 0 0 12px 0;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 13px 18px;
-            border-radius: 25px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .social-btn .icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        .social-btn.facebook {
-            background: #1877f2;
-        }
-
-        .social-btn.facebook:hover {
-            background: transparent;
-            border-color: #1877f2;
-            color: #1877f2;
-        }
-
-        .social-btn.youtube {
-            background: #ff0000;
-        }
-
-        .social-btn.youtube:hover {
-            background: transparent;
-            border-color: #ff0000;
-            color: #ff0000;
-        }
-
-        .social-btn.tiktok {
-            background: #000000;
-            border-color: #ffffff;
-        }
-
-        .social-btn.tiktok:hover {
-            background: #ffffff;
-            color: #000000;
         }
 
         .player-container {
-            margin-top: 18px;
-            padding: 15px;
+            margin-top: 6px;
+            padding: 6px;
             background: rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
         }
 
         .now-playing {
             color: #ffdd00;
-            font-size: 12px;
-            margin-bottom: 10px;
+            font-size: 10px;
+            margin-bottom: 4px;
             font-style: italic;
         }
 
@@ -239,69 +336,64 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            height: 18px;
-            margin-bottom: 10px;
+            height: 8px;
+            margin-bottom: 4px;
             gap: 2px;
         }
-
         .bar {
             width: 2px;
             background-color: #ffffff;
             border-radius: 2px;
             animation: bounce 0.5s ease-in-out infinite alternate;
         }
-
         @keyframes bounce {
-            from { height: 4px; }
-            to { height: 16px; }
+            from { height: 3px; }
+            to { height: 8px; }
         }
 
         .controls {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 18px;
-            margin-bottom: 10px;
+            gap: 6px;
+            margin-bottom: 4px;
         }
 
         .btn {
             background: transparent;
             border: 2px solid #ffffff;
             color: #ffffff;
-            width: 38px;
-            height: 38px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            font-size: 14px;
+            font-size: 10px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
-
         .btn:hover {
             background: rgba(255,255,255,0.2);
         }
-
         .btn.main {
-            width: 48px;
-            height: 48px;
-            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+            font-weight: bold;
         }
 
         .progress-wrap {
             width: 100%;
-            margin-top: 8px;
+            margin-top: 3px;
         }
-
         .progress-bar {
             width: 100%;
-            height: 2px;
+            height: 3px;
             background: rgba(255,255,255,0.3);
             border-radius: 2px;
             cursor: pointer;
         }
-
         .progress-fill {
             height: 100%;
             width: 0%;
@@ -309,14 +401,13 @@
             border-radius: 2px;
             position: relative;
         }
-
         .progress-fill::after {
             content: '';
             position: absolute;
-            right: -5px;
-            top: -3px;
-            width: 9px;
-            height: 9px;
+            right: -3px;
+            top: -1px;
+            width: 6px;
+            height: 6px;
             background: #ffffff;
             border-radius: 50%;
         }
@@ -324,50 +415,130 @@
         .time-display {
             display: flex;
             justify-content: space-between;
-            font-size: 11px;
+            font-size: 8px;
             color: #ffffff;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .volume-wrap {
+            margin-top: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            margin-top: 10px;
-            cursor: pointer;
+            gap: 4px;
         }
-
         .volume-icon {
+            font-size: 10px;
             color: #ffffff;
-            font-size: 16px;
         }
-
         .volume-slider {
-            width: 120px;
-            height: 2px;
+            width: 80px;
+            height: 3px;
+            -webkit-appearance: none;
             background: rgba(255,255,255,0.3);
             border-radius: 2px;
-            position: relative;
+            outline: none;
+            cursor: pointer;
         }
-
-        .volume-fill {
-            height: 100%;
-            width: 70%;
-            background: #ffffff;
-            border-radius: 2px;
-            position: relative;
-        }
-
-        .volume-fill::after {
-            content: '';
-            position: absolute;
-            right: -5px;
-            top: -3px;
-            width: 9px;
-            height: 9px;
-            background: #ffffff;
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 10px;
+            background: #00ff41;
             border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 5px #00ff41;
+        }
+
+        .social-platforms {
+            width: 100%;
+            margin-top: 6px;
+            padding: 6px 8px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .social-platforms .text-line {
+            font-size: 10px;
+            font-weight: bold;
+            color: #ffdd00;
+            margin-bottom: 4px;
+            margin-top: 2px;
+        }
+
+        .arrows-line {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 4px;
+        }
+
+        .arrow-fb {
+            font-size: 14px;
+            color: #1877f2;
+        }
+
+        .arrow-yt {
+            font-size: 14px;
+            color: #ff0000;
+        }
+
+        .arrow-tt {
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            border-radius: 15px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .social-btn .icon {
+            width: 13px;
+            height: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-btn.facebook {
+            background: #1877F2;
+        }
+        .social-btn.facebook:hover {
+            background: #166FE5;
+            transform: scale(1.05);
+        }
+        .social-btn.youtube {
+            background: #FF0000;
+        }
+        .social-btn.youtube:hover {
+            background: #CC0000;
+            transform: scale(1.05);
+        }
+        .social-btn.tiktok {
+            background: #000000;
+            border: 1px solid #25F4EE;
+            box-shadow: inset -1px -1px 0 #FE2C55;
+        }
+        .social-btn.tiktok:hover {
+            transform: scale(1.05);
         }
 
         .comment-section {
@@ -375,125 +546,117 @@
             bottom: 20px;
             right: 20px;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,60,0.6));
-            padding: 12px 15px;
-            border-radius: 12px;
-            width: 260px;
+            padding: 10px 12px;
+            border-radius: 10px;
+            width: 230px;
             box-shadow: 0 0 18px rgba(100, 180, 255, 0.25);
             border: 1px solid rgba(150, 200, 255, 0.3);
             z-index: 9999;
         }
-
         .comment-section h3 {
             color: #ffdd00;
-            font-size: 14px;
+            font-size: 12px;
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-shadow: 1px 1px 3px #000;
         }
-
         .comment-input-area {
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            margin-bottom: 8px;
+            gap: 5px;
+            margin-bottom: 6px;
         }
-
         .comment-input-area input,
         .comment-input-area textarea {
             width: 100%;
             box-sizing: border-box;
-            padding: 7px;
-            border-radius: 6px;
+            padding: 5px;
+            border-radius: 5px;
             border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(0,0,0.4);
+            background: rgba(0,0,0,0.4);
             color: #ffffff;
-            font-size: 12px;
+            font-size: 11px;
             outline: none;
         }
-
         .comment-input-area input::placeholder,
         .comment-input-area textarea::placeholder {
             color: #cccccc;
         }
-
         .comment-input-area button {
-            padding: 7px 10px;
+            padding: 5px 8px;
             background: linear-gradient(90deg, #ffdd00, #ffaa00);
             color: #000000;
             border: none;
-            border-radius: 6px;
-            font-size: 12px;
+            border-radius: 5px;
+            font-size: 11px;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
-
         .comment-input-area button:hover {
             transform: scale(1.03);
-            box-shadow: 0 0 10px rgba(255, 221, 0, 0.5);
+            box-shadow: 0 0 8px rgba(255, 221, 0, 0.5);
         }
-
         .comments-list {
-            max-height: 220px;
+            max-height: 180px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 7px;
+            gap: 5px;
         }
-
         .comment-item {
             background: rgba(255,255,255,0.08);
-            padding: 7px 9px;
-            border-radius: 6px;
+            padding: 5px 7px;
+            border-radius: 5px;
             border-left: 3px solid #ffdd00;
         }
-
         .comment-name {
             font-weight: bold;
             color: #ffdd00;
-            font-size: 11px;
+            font-size: 10px;
             margin-bottom: 2px;
         }
-
         .comment-text {
-            font-size: 12px;
+            font-size: 11px;
             color: #ffffff;
-            line-height: 1.3;
+            line-height: 1.2;
         }
-
         .comment-time {
-            font-size: 10px;
+            font-size: 9px;
             color: #aaaaaa;
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
-        audio {
-            display: none;
-        }
+        audio { display: none; }
 
         @media (max-width: 800px) {
             .neon-welcome {
-                font-size: 48px;
-                letter-spacing: 6px;
+                font-size: 42px;
+                letter-spacing: 5px;
             }
-            .main-wrapper {
-                flex-direction: column;
+            .boss-niddo {
+                font-size: 42px;
+                letter-spacing: 5px;
             }
-            .track-list {
-                width: 380px;
+            .hit-forge {
+                font-size: 24px;
+                letter-spacing: 4px;
             }
-            .social-links {
-                flex-direction: column;
-                align-items: center;
+            .music-production {
+                font-size: 16px;
+                letter-spacing: 3px;
             }
-            .arrows-line {
-                gap: 100px;
+            .bg-neon-boss {
+                font-size: 80px;
+                letter-spacing: 10px;
             }
+            .main-wrapper { flex-direction: column; margin-top: 0; }
+            .track-list { width: 230px; }
             .comment-section {
                 position: relative;
                 bottom: auto;
                 right: auto;
-                width: 380px;
+                width: 230px;
                 margin-top: 20px;
             }
         }
@@ -501,14 +664,23 @@
 </head>
 <body>
 
-    <!-- ✨ WELCOME — PULA with BLUE NEON GLOW ✨ -->
+    <!-- ✅ Background: Malaking BOSS NIDDO Green Neon -->
+    <div class="bg-neon-boss">BOSS NIDDO</div>
+
+    <!-- ✅ Stage Light Effect -->
+    <div class="stage-light"></div>
+
     <div class="neon-welcome">WELCOME</div>
+    <h1 class="boss-niddo">BOSS NIDDO</h1>
+    <div style="text-align:center;">
+        <div class="hit-forge">HitForgeStudio</div>
+    </div>
+    <h2 class="music-production">MUSIC PRODUCTION</h2>
 
-    <h2>📋 Broken Track List &nbsp; 🎶 Cover Hugot 💔</h2>
     <div class="main-wrapper">
-
-        <!-- ✅ SONG LIST BOX — NASA KALIWA ✅ -->
         <div class="track-list">
+            <div class="song-list-title">SONG LIST COVER</div>
+
             <ul id="songList">
                 <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
                 <li data-file="Andamanaya.mp3" onclick="playSong(this)">🎵 Andamanaya</li>
@@ -518,10 +690,17 @@
                 <li data-file="How do I live without you.mp3" onclick="playSong(this)">🎵 How Do I Live Without You</li>
                 <li data-file="How do you heal a broken heart.mp3" onclick="playSong(this)">🎵 How Do You Heal A Broken Heart</li>
                 <li data-file="I love you goodbye.mp3" onclick="playSong(this)">🎵 I Love You Goodbye</li>
+                <li data-file="I need someone like you.mp3" onclick="playSong(this)">🎵 I Need Someone Like You</li>
+                <li data-file="kakalimutan na kita.mp3" onclick="playSong(this)">🎵 Kakalimutan Na Kita</li>
+                <li data-file="love is gone.mp3" onclick="playSong(this)">🎵 Love Is Gone</li>
+                <li data-file="Love moves in mysterious way.mp3" onclick="playSong(this)">🎵 Love Moves In Mysterious Way</li>
+                <li data-file="one last cry.mp3" onclick="playSong(this)">🎵 One Last Cry</li>
+                <li data-file="One More Chance.mp3" onclick="playSong(this)">🎵 One More Chance</li>
+                <li data-file="Only reminds me of you.mp3" onclick="playSong(this)">🎵 Only Reminds Me Of You</li>
             </ul>
 
             <div class="player-container">
-                <div class="now-playing" id="nowPlaying">Select a song to play...</div>
+                <div class="now-playing" id="nowPlaying">Select a song...</div>
                 <div class="visualizer" id="visualizer"></div>
                 <div class="controls">
                     <button class="btn" onclick="prevSong()">&#9664;</button>
@@ -537,59 +716,53 @@
                         <span id="durTime">00:00</span>
                     </div>
                 </div>
-                <div class="volume-wrap" onclick="setVolume(event)">
+                <div class="volume-wrap">
                     <span class="volume-icon">🔊</span>
-                    <div class="volume-slider">
-                        <div class="volume-fill" id="volumeFill"></div>
-                    </div>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70" oninput="setVolume(this.value)">
                 </div>
                 <audio id="player">
             </div>
 
-            <!-- TEXT + PALASO -->
-            <div class="social-note">
+            <div class="social-platforms">
                 <div class="text-line">✨ Don't Forget to Subscribe & Click Here! ✨</div>
                 <div class="arrows-line">
                     <span class="arrow-fb">⬇</span>
                     <span class="arrow-yt">⬇</span>
                     <span class="arrow-tt">⬇</span>
                 </div>
-            </div>
-
-            <!-- MGA BUTON NG SOCIAL MEDIA -->
-            <div class="social-links">
-                <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">
-                    <span class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82V14.706h-3.467v-4.05h3.467V7.235c0-3.424 2.095-5.288 5.165-5.288 1.467 0 2.726.11 3.093.159v3.587h-2.12c-1.215 0-1.45.578-1.45 1.425v2.55h2.89l-.377 4.05h-2.513V24h4.918c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
-                        </svg>
-                    </span>
-                    Facebook
-                </a>
-                <a href="https://www.youtube.com/@MyHansome23" target="_blank" class="social-btn youtube">
-                    <span class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.498 6.186a3.96 3.96 0 0 0-2.776-2.777C18.504 3.007 12 3.007 12 3.007s-6.504 0-8.722.402A3.96 3.96 0 0 0 .502 6.186C0 8.405 0 12 12s0 3.595.502 5.814a3.96 3.96 0 0 0 2.776 2.777c2.218.401 8.722.401 8.722.401s6.504 0 8.722-.401a3.96 3.96 0 0 0 2.776-2.777C24 15.595 24 12 24 12s0-3.595-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                    </span>
-                    YouTube
-                </a>
-                <a href="https://www.tiktok.com/@niddofias" target="_blank" class="social-btn tiktok">
-                    <span class="icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12.525.02c1.164.048 2.326.072 3.488.072.362 0 .724-.012 1.085-.03.36-.018.72-.042 1.078-.072v3.53c-.358.03-.718.054-1.078.072-.361.018-.723.03-1.085.03-1.162 0-2.324-.024-3.488-.072v8.448c0 2.565-2.077 4.642-4.642 4.642-1.36 0-2.592-.534-3.507-1.408A4.642 4.642 0 0 1 5.257 12.6c0-2.565 2.077-4.642 4.642-4.642.323 0 .637.042.938.117V4.485c-.3-.03-.615-.054-.938-.072C7.237 4.305 5.005 6.61 5.005 9.6v.06c0 3.545 2.955 6.5 6.5 6.5s6.5-2.955 6.5-6.5V5.72c.915.69 1.995 1.125 3.12 1.125v-3.54c-1.125 0-2.205-.435-3.12-1.125z"/>
-                        </svg>
-                    </span>
-                    TikTok
-                </a>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </span>
+                        Facebook
+                    </a>
+                    <a href="https://www.youtube.com/@MyHansome23" target="_blank" class="social-btn youtube">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </span>
+                        YouTube
+                    </a>
+                    <a href="https://www.tiktok.com/@niddofias" target="_blank" class="social-btn tiktok">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.76 1.62 4.29 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.65-1.35 3.81-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.51.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.54-.14-1.1-.26-1.62-.37-1.44-.44-3.04-.06-4.05 1.05-.44.55-.72 1.24-.83 1.96-.09.48-.13.97-.12 1.46.19 1.42.92 2.66 2.28 3.37 1.14.6 2.47.52 3.58-.19.01-2.94-.02-5.87-.02-8.81 1.33.94 3.01 1.39 4.69 1.33V8.65c-.74-.03-1.47-.16-2.18-.37-.56-.17-1.1-.4-1.62-.66.02-.79.03-1.58.02-2.37z"/>
+                            </svg>
+                        </span>
+                        TikTok
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- COMMENT SECTION -->
     <div class="comment-section">
         <h3>💬 Comment Section</h3>
-        <p style="font-size:11px; color:#ccc; margin:0 0 8px 0;">May tanong o mensahe? Iwan mo dito!</p>
+        <p style="font-size:10px; color:#ccc; margin:0 0 6px 0;">May mensahe? Iwan mo dito!</p>
         <div class="comment-input-area">
             <input type="text" id="commenterName" placeholder="Pangalan..." maxlength="30">
             <textarea id="commentText" rows="2" placeholder="Komento..." maxlength="500"></textarea>
@@ -601,6 +774,7 @@
     <script>
         let currentPlaying = null;
         let currentIndex = -1;
+
         const songFiles = [
             'Alone.mp3',
             'Andamanaya.mp3',
@@ -609,8 +783,16 @@
             'Fixing a broken heart.mp3',
             'How do I live without you.mp3',
             'How do you heal a broken heart.mp3',
-            'I love you goodbye.mp3'
+            'I love you goodbye.mp3',
+            'I need someone like you.mp3',
+            'kakalimutan na kita.mp3',
+            'love is gone.mp3',
+            'Love moves in mysterious way.mp3',
+            'one last cry.mp3',
+            'One More Chance.mp3',
+            'Only reminds me of you.mp3'
         ];
+
         const songNames = {
             'Alone.mp3': 'Alone',
             'Andamanaya.mp3': 'Andamanaya',
@@ -619,18 +801,29 @@
             'Fixing a broken heart.mp3': 'Fixing A Broken Heart',
             'How do I live without you.mp3': 'How Do I Live Without You',
             'How do you heal a broken heart.mp3': 'How Do You Heal A Broken Heart',
-            'I love you goodbye.mp3': 'I Love You Goodbye'
+            'I love you goodbye.mp3': 'I Love You Goodbye',
+            'I need someone like you.mp3': 'I Need Someone Like You',
+            'kakalimutan na kita.mp3': 'Kakalimutan Na Kita',
+            'love is gone.mp3': 'Love Is Gone',
+            'Love moves in mysterious way.mp3': 'Love Moves In Mysterious Way',
+            'one last cry.mp3': 'One Last Cry',
+            'One More Chance.mp3': 'One More Chance',
+            'Only reminds me of you.mp3': 'Only Reminds Me Of You'
         };
+
         const player = document.getElementById('player');
         const playBtn = document.getElementById('playBtn');
         const progressFill = document.getElementById('progressFill');
         const currTimeEl = document.getElementById('currTime');
         const durTimeEl = document.getElementById('durTime');
         const visualizer = document.getElementById('visualizer');
-        const volumeFill = document.getElementById('volumeFill');
         player.volume = 0.7;
 
-        for(let i=0; i<20; i++) {
+        function setVolume(value) {
+            player.volume = value / 100;
+        }
+
+        for(let i=0; i<15; i++) {
             const bar = document.createElement('div');
             bar.className = 'bar';
             bar.style.animationDelay = `${i*0.05}s`;
@@ -643,7 +836,7 @@
             currentPlaying = element;
             const file = element.dataset.file;
             currentIndex = songFiles.indexOf(file);
-            document.getElementById('nowPlaying').textContent = '🎶 Now Playing: ' + songNames[file];
+            document.getElementById('nowPlaying').textContent = '🎶 ' + songNames[file];
             player.src = file;
             player.play();
             playBtn.innerHTML = '&#10074;&#10074;';
@@ -674,17 +867,10 @@
 
         function seekTo(e) {
             if (player.duration) {
-                const rect = e.target.getBoundingClientRect();
+                const rect = e.currentTarget.closest('.progress-bar').getBoundingClientRect();
                 const percent = (e.clientX - rect.left) / rect.width;
                 player.currentTime = percent * player.duration;
             }
-        }
-
-        function setVolume(e) {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const percent = (e.clientX - rect.left) / rect.width;
-            player.volume = percent;
-            volumeFill.style.width = (percent * 100) + '%';
         }
 
         player.addEventListener('timeupdate', () => {
@@ -701,9 +887,9 @@
         player.addEventListener('play', () => playBtn.innerHTML = '&#10074;&#10074;');
 
         function formatTime(sec) {
-            const m = Math.floor(sec/60);
-            const s = Math.floor(sec%60);
-            return `${m<10?'0':''}${m}:${s<10?'0':''}${s}`;
+            const m = Math.floor(sec / 60);
+            const s = Math.floor(sec % 60);
+            return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
         }
 
         const STORAGE_KEY = 'bossniddo_comments';
@@ -711,11 +897,9 @@
             const saved = localStorage.getItem(STORAGE_KEY);
             return saved ? JSON.parse(saved) : [];
         }
-
         function saveComments(comments) {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
         }
-
         function renderComments() {
             const list = document.getElementById('commentsList');
             const comments = loadComments();
@@ -731,20 +915,18 @@
                 list.prepend(item);
             });
         }
-
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
         }
-
         function addComment() {
             const nameInput = document.getElementById('commenterName');
             const textInput = document.getElementById('commentText');
             const name = nameInput.value.trim() || 'Anonimo';
             const text = textInput.value.trim();
             if (!text) {
-                alert('⚠️ Isulat muna ang iyong komento bago ipadala!');
+                alert('⚠️ Isulat muna ang komento!');
                 return;
             }
             const now = new Date();
@@ -758,9 +940,8 @@
             renderComments();
             nameInput.value = '';
             textInput.value = '';
-            alert('✅ Salamat sa iyong komento!');
+            alert('✅ Salamat sa komento!');
         }
-
         renderComments();
     </script>
 </body>
