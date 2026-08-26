@@ -443,6 +443,14 @@
                 <li data-file="How do I live without you.mp3" onclick="playSong(this)">🎵 How Do I Live Without You</li>
                 <li data-file="How do you heal a broken heart.mp3" onclick="playSong(this)">🎵 How Do You Heal A Broken Heart</li>
                 <li data-file="I love you goodbye.mp3" onclick="playSong(this)">🎵 I Love You Goodbye</li>
+                <!-- ✅ MGA BAGONG KANTA NA IDINAGDAG -->
+                <li data-file="I need someone like you.mp3" onclick="playSong(this)">🎵 I Need Someone Like You</li>
+                <li data-file="kakalimutan na kita.mp3" onclick="playSong(this)">🎵 Kakalimutan Na Kita</li>
+                <li data-file="love is gone.mp3" onclick="playSong(this)">🎵 Love Is Gone</li>
+                <li data-file="Love move's in mysterious way.mp3" onclick="playSong(this)">🎵 Love Moves In Mysterious Way</li>
+                <li data-file="one last cry.mp3" onclick="playSong(this)">🎵 One Last Cry</li>
+                <li data-file="One More Chance.mp3" onclick="playSong(this)">🎵 One More Chance</li>
+                <li data-file="Only reminds me of you.mp3" onclick="playSong(this)">🎵 Only Reminds Me Of You</li>
             </ul>
 
             <div class="player-container">
@@ -517,6 +525,8 @@
     <script>
         let currentPlaying = null;
         let currentIndex = -1;
+
+        // ✅ BUONG LISTAHAN NG MGA KANTA (Luma + Bago)
         const songFiles = [
             'Alone.mp3',
             'Andamanaya.mp3',
@@ -525,8 +535,16 @@
             'Fixing a broken heart.mp3',
             'How do I live without you.mp3',
             'How do you heal a broken heart.mp3',
-            'I love you goodbye.mp3'
+            'I love you goodbye.mp3',
+            'I need someone like you.mp3',
+            'kakalimutan na kita.mp3',
+            'love is gone.mp3',
+            'Love move\'s in mysterious way.mp3',
+            'one last cry.mp3',
+            'One More Chance.mp3',
+            'Only reminds me of you.mp3'
         ];
+
         const songNames = {
             'Alone.mp3': 'Alone',
             'Andamanaya.mp3': 'Andamanaya',
@@ -535,8 +553,16 @@
             'Fixing a broken heart.mp3': 'Fixing A Broken Heart',
             'How do I live without you.mp3': 'How Do I Live Without You',
             'How do you heal a broken heart.mp3': 'How Do You Heal A Broken Heart',
-            'I love you goodbye.mp3': 'I Love You Goodbye'
+            'I love you goodbye.mp3': 'I Love You Goodbye',
+            'I need someone like you.mp3': 'I Need Someone Like You',
+            'kakalimutan na kita.mp3': 'Kakalimutan Na Kita',
+            'love is gone.mp3': 'Love Is Gone',
+            'Love move\'s in mysterious way.mp3': 'Love Moves In Mysterious Way',
+            'one last cry.mp3': 'One Last Cry',
+            'One More Chance.mp3': 'One More Chance',
+            'Only reminds me of you.mp3': 'Only Reminds Me Of You'
         };
+
         const player = document.getElementById('player');
         const playBtn = document.getElementById('playBtn');
         const progressFill = document.getElementById('progressFill');
