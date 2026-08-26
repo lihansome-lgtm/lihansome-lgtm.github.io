@@ -6,7 +6,7 @@
     <title>Broken Track List</title>
     <style>
         body {
-            background-image: url("Boss Niddo1.jpg");
+            background-image: url("Boss Niddo2.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -58,7 +58,7 @@
         }
 
         h2 {
-            display: none; /* Tinago para pantay na talaga */
+            display: none;
         }
 
         .main-wrapper {
@@ -67,19 +67,19 @@
             gap: 25px;
             align-items: flex-start;
             flex-wrap: wrap;
-            margin-top: -10px; /* ✅ ITAAS — Pantay na sa taas ng WELCOME */
+            margin-top: -10px;
         }
 
-        /* ✅ SONG LIST BOX — PAIKLI NA AT PANTAY SA WELCOME ✅ */
+        /* ✅ SONG LIST BOX — MAIKLI LANG, PANTAY SA WELCOME */
         .track-list {
             margin-top: 0;
             text-align: left;
             background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(30,10,50,0.6));
-            padding: 12px 15px; /* ✅ PAIKLI — Hindi na mahaba */
+            padding: 12px 15px;
             border-radius: 12px;
-            font-size: 13px; /* ✅ PINALIIT SULAT */
-            line-height: 1.4; /* ✅ PAIKLI ANG PAGIT NG LINYA */
-            width: 280px; /* ✅ PINALIIT ANG LAPAD */
+            font-size: 13px;
+            line-height: 1.4;
+            width: 280px;
             box-shadow: 0 0 18px rgba(150, 50, 255, 0.3);
             border: 1px solid rgba(200, 150, 255, 0.3);
         }
@@ -87,7 +87,7 @@
         .track-list ul {
             list-style: none;
             padding-left: 0;
-            margin: 0 0 10px 0; /* ✅ PAIKLI SA ILALIM */
+            margin: 0 0 10px 0;
         }
 
         .track-list li {
@@ -95,7 +95,7 @@
             text-shadow: 1px 1px 3px #000000;
             cursor: pointer;
             transition: all 0.4s ease;
-            padding: 2px 6px; /* ✅ PAIKLI ANG PUWANG */
+            padding: 2px 6px;
             border-radius: 5px;
         }
 
@@ -123,21 +123,9 @@
             }
         }
 
-        .social-note {
-            display: none; /* ✅ TINAGO — PARA HINDI HABA ANG BOX */
-        }
-
-        .arrows-line {
-            display: none;
-        }
-
-        .social-links {
-            display: none; /* ✅ TINAGO — PARA MAIKLI ANG BOX */
-        }
-
         .player-container {
             margin-top: 8px;
-            padding: 8px; /* ✅ PAIKLI */
+            padding: 8px;
             background: rgba(0, 0, 0, 0.4);
             border-radius: 10px;
             text-align: center;
@@ -238,7 +226,105 @@
         }
 
         .volume-wrap {
-            display: none; /* ✅ TINAGO — PARA HINDI HABA */
+            display: none;
+        }
+
+        /* ✅ SOCIAL PLATFORMS — NASA LABAS NG SONG LIST BOX, ILALIM */
+        .social-platforms {
+            width: 280px;
+            margin-top: 12px;
+            padding: 10px 12px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(20,20,60,0.6));
+            border: 1px solid rgba(150, 200, 255, 0.3);
+            border-radius: 12px;
+            box-shadow: 0 0 18px rgba(100, 180, 255, 0.25);
+            text-align: center;
+        }
+
+        .social-platforms .text-line {
+            font-size: 13px;
+            font-weight: bold;
+            color: #ffdd00;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9), 0 0 10px rgba(255, 221, 0, 0.5);
+            margin-bottom: 8px;
+        }
+
+        .arrows-line {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 8px;
+        }
+
+        .arrow-fb {
+            font-size: 24px;
+            color: #1877f2;
+            text-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
+        }
+
+        .arrow-yt {
+            font-size: 24px;
+            color: #ff0000;
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+        }
+
+        .arrow-tt {
+            font-size: 24px;
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 14px;
+            border-radius: 25px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .social-btn .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .social-btn.facebook {
+            background: #1877f2;
+        }
+        .social-btn.facebook:hover {
+            background: transparent;
+            border-color: #1877f2;
+            color: #1877f2;
+        }
+
+        .social-btn.youtube {
+            background: #ff0000;
+        }
+        .social-btn.youtube:hover {
+            background: transparent;
+            border-color: #ff0000;
+            color: #ff0000;
+        }
+
+        .social-btn.tiktok {
+            background: #000000;
+            border-color: #ffffff;
+        }
+        .social-btn.tiktok:hover {
+            background: #ffffff;
+            color: #000000;
         }
 
         .comment-section {
@@ -336,6 +422,7 @@
             }
             .main-wrapper { flex-direction: column; }
             .track-list { width: 280px; }
+            .social-platforms { width: 280px; }
             .comment-section {
                 position: relative;
                 bottom: auto;
@@ -348,11 +435,11 @@
 </head>
 <body>
 
-    <!-- ✨ WELCOME — PINK + GREEN NEON ✨ -->
+    <!-- ✨ WELCOME ✨ -->
     <div class="neon-welcome">WELCOME</div>
 
     <div class="main-wrapper">
-        <!-- ✅ SONG LIST BOX — PAIKLI NA + PANTAY SA WELCOME ✅ -->
+        <!-- ✅ SONG LIST BOX — PANTAY SA WELCOME, MAIKLI -->
         <div class="track-list">
             <ul id="songList">
                 <li data-file="Alone.mp3" onclick="playSong(this)">🎵 Alone</li>
@@ -383,6 +470,42 @@
                     </div>
                 </div>
                 <audio id="player">
+            </div>
+        </div>
+
+        <!-- ✅ TATLONG PLATFORM — NASA LABAS, ILALIM NG SONG LIST BOX -->
+        <div class="social-platforms">
+            <div class="text-line">✨ Don't Forget to Subscribe & Click Here! ✨</div>
+            <div class="arrows-line">
+                <span class="arrow-fb">⬇</span>
+                <span class="arrow-yt">⬇</span>
+                <span class="arrow-tt">⬇</span>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/niddofias" target="_blank" class="social-btn facebook">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82V14.706h-3.467v-4.05h3.467V7.235c0-3.424 2.095-5.288 5.165-5.288 1.467 0 2.726.11 3.093.159v3.587h-2.12c-1.215 0-1.45.578-1.45 1.425v2.55h2.89l-.377 4.05h-2.513V24h4.918c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+                        </svg>
+                    </span>
+                    Facebook
+                </a>
+                <a href="https://www.youtube.com/@MyHansome23" target="_blank" class="social-btn youtube">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.96 3.96 0 0 0-2.776-2.777C18.504 3.007 12 3.007 12 3.007s-6.504 0-8.722.402A3.96 3.96 0 0 0 .502 6.186C0 8.405 0 12 12 12s0 3.595.502 5.814a3.96 3.96 0 0 0 2.776 2.777c2.218.401 8.722.401 8.722.401s6.504 0 8.722-.401a3.96 3.96 0 0 0 2.776-2.777C24 15.595 24 12 24 12s0-3.595-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </span>
+                    YouTube
+                </a>
+                <a href="https://www.tiktok.com/@niddofias" target="_blank" class="social-btn tiktok">
+                    <span class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.164.048 2.326.072 3.488.072.362 0 .724-.012 1.085-.03.36-.018.72-.042 1.078-.072v3.53c-.358.03-.718.054-1.078.072-.361.018-.723.03-1.085.03-1.162 0-2.324-.024-3.488-.072v8.448c0 2.565-2.077 4.642-4.642 4.642-1.36 0-2.592-.534-3.507-1.408A4.642 4.642 0 0 1 5.257 12.6c0-2.565 2.077-4.642 4.642-4.642.323 0 .637.042.938.117V4.485c-.3-.03-.615-.054-.938-.072C7.237 4.305 5.005 6.61 5.005 9.6v.06c0 3.545 2.955 6.5 6.5 6.5s6.5-2.955 6.5-6.5V5.72c.915.69 1.995 1.125 3.12 1.125v-3.54c-1.125 0-2.205-.435-3.12-1.125z"/>
+                        </svg>
+                    </span>
+                    TikTok
+                </a>
             </div>
         </div>
     </div>
