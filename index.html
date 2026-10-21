@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login — HitForgeStudio</title>
+    
     <!-- Google Sign-In API -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
     <!-- Facebook SDK -->
     <script>
         window.fbAsyncInit = function() {
@@ -87,13 +89,6 @@
             background: #1877F2;
             color: white;
         }
-        .google-btn {
-            background: white;
-            color: #444;
-        }
-        .manual-divider {
-            margin-top: 25px;
-        }
         input {
             width: 100%;
             padding: 14px;
@@ -121,21 +116,8 @@
             cursor: pointer;
             margin-top: 10px;
         }
-        .error-msg {
-            color: #ff4444;
-            margin-top: 12px;
-            display: none;
-        }
-        .success-msg {
-            color: #00ff41;
-            margin-top: 12px;
-            display: none;
-        }
-        /* Google button container */
-        #g_id_onload, .g_id_signin {
-            width: 100% !important;
-            justify-content: center;
-        }
+        .error-msg { color: #ff4444; margin-top: 12px; display: none; }
+        .success-msg { color: #00ff41; margin-top: 12px; display: none; }
         @media (max-width: 480px) {
             .login-box { width: 90%; padding: 30px 20px; }
         }
@@ -151,7 +133,8 @@
              data-client_id="PALITAN_ITO_GOOGLE_CLIENTID.apps.googleusercontent.com"
              data-callback="handleGoogleSignIn">
         </div>
-        <div class="g_id_signin" data-type="standard" data-size="large" data-text="signin_with" data-shape="rectangular" data-width="300"></div>
+        <div class="g_id_signin" data-type="standard" data-size="large" 
+             data-text="signin_with" data-shape="rectangular"></div>
 
         <!-- FACEBOOK LOGIN -->
         <button class="social-btn fb-btn" onclick="loginWithFacebook()">
@@ -163,22 +146,19 @@
 
         <div class="divider">O kaya</div>
 
-        <!-- MANUAL LOGIN (pang-backup) -->
-        <form id="loginForm" class="manual-divider">
+        <!-- MANUAL LOGIN -->
+        <form id="loginForm">
             <input type="text" id="username" placeholder="👤 Username" required>
             <input type="password" id="password" placeholder="🔒 Password" required>
-            <button type="submit" class="pass-btn">🔐 Pumasok gamit ang Password</button>
+            <button type="submit" class="pass-btn">🔐 Pumasok</button>
         </form>
 
-        <p class="error-msg" id="errorMsg">❌ Hindi nakapasok — subukan ulit!</p>
-        <p class="success-msg" id="successMsg">✅ Nakapasok na! Hintayin mo sandali...</p>
+        <p class="error-msg" id="errorMsg">❌ Mali ang username o password!</p>
+        <p class="success-msg" id="successMsg">✅ Tama! Papasok ka na...</p>
     </div>
 
     <script>
-        // === MANUAL LOGIN ===
-        const USERNAME = "bossniddo";
-        const PASSWORD = "iyongpassword123";
-
+        // === PUMASOK SA PANGUNAHING PAHINA ===
         function goToMainPage() {
             localStorage.setItem("bossniddo_loggedin", "yes");
             document.getElementById("successMsg").style.display = "block";
@@ -186,6 +166,10 @@
                 window.location.href = "index.html";
             }, 800);
         }
+
+        // === USERNAME & PASSWORD ===
+        const USERNAME = "bossniddo";
+        const PASSWORD = "123456"; // Palitan mo ito!
 
         document.getElementById("loginForm").addEventListener("submit", function(e) {
             e.preventDefault();
@@ -199,14 +183,13 @@
             }
         });
 
-        // === GOOGLE SIGN-IN ===
+        // === GOOGLE LOGIN ===
         function handleGoogleSignIn(response) {
             console.log("Google login success");
-            // Kung nakapasok sa Google, payagan — pwede mo rin dito i-check ang email
             goToMainPage();
         }
 
-        // === FACEBOOK SIGN-IN ===
+        // === FACEBOOK LOGIN ===
         function loginWithFacebook() {
             FB.login(function(response) {
                 if (response.authResponse) {
