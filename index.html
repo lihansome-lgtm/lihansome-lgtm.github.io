@@ -23,7 +23,7 @@
             border-radius: 15px;
             box-shadow: 0 0 25px #ff2eeb, 0 0 40px #00ff41;
             text-align: center;
-            width: 340px;
+            width: 320px;
             border: 2px solid rgba(0,255,65,0.3);
         }
         .logo-text {
@@ -36,7 +36,7 @@
         .sub-text {
             color: #00ff41;
             font-size: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             letter-spacing: 3px;
         }
         input {
@@ -67,9 +67,14 @@
             margin-top: 10px;
             transition: transform 0.3s;
         }
-        button:hover { transform: scale(1.03); }
-        .error-msg { color: #ff4444; margin-top: 12px; display: none; }
-        .success-msg { color: #00ff41; margin-top: 12px; display: none; }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .error-msg {
+            color: #ff4444;
+            margin-top: 12px;
+            display: none;
+        }
         @media (max-width: 480px) {
             .login-box { width: 90%; padding: 30px 20px; }
         }
@@ -87,29 +92,22 @@
         </form>
         
         <p class="error-msg" id="errorMsg">❌ Maling username o password!</p>
-        <p class="success-msg" id="successMsg">✅ Tama! Papasok ka na...</p>
     </div>
 
     <script>
-        // === IYONG PAGPASOK — PALITAN MO KUNG GUSTO MO ===
+        // ✅ PALITAN DITO ANG GUSTO MONG USERNAME AT PASSWORD
         const USERNAME = "bossniddo";
-        const PASSWORD = "123456"; // ⚠️ GAWING SARILI MO!
-
-        function goToMainPage() {
-            localStorage.setItem("bossniddo_loggedin", "yes");
-            document.getElementById("successMsg").style.display = "block";
-            setTimeout(() => {
-                window.location.href = "index.html";
-            }, 800);
-        }
+        const PASSWORD = "iyongpassword123"; // palitan mo ito!
 
         document.getElementById("loginForm").addEventListener("submit", function(e) {
             e.preventDefault();
+            
             const user = document.getElementById("username").value.trim();
             const pass = document.getElementById("password").value;
 
             if(user === USERNAME && pass === PASSWORD) {
-                goToMainPage();
+                localStorage.setItem("bossniddo_loggedin", "yes");
+                window.location.href = "index.html"; // papunta sa iyong pahina
             } else {
                 document.getElementById("errorMsg").style.display = "block";
             }
